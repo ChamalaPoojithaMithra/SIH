@@ -1669,8 +1669,8 @@ app.post("/api/ivr/help", (req, res) => {
 // START SERVER
 // ======================================================
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
-app.listen(PORT, () => {
-  console.log(`E-Waste Connect server running at http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`E-Waste Connect server running on port ${PORT}`);
 });
