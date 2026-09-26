@@ -1,0 +1,411 @@
+* {
+  box-sizing: border-box;
+}
+
+.recycler-login-screen {
+  min-height: 100vh;
+  width: 100%;
+
+  background: linear-gradient(
+    135deg,
+    #071b14,
+    #0b3023,
+    #063c29
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 25px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.recycler-login-header {
+  width: min(700px, 100%);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+/* =========================
+   BACK BUTTON - GREEN
+========================= */
+
+.recycler-login-back-button {
+  border: none;
+
+  background: #25b95f;
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.recycler-login-back-button:hover {
+  background: #1fa653;
+
+  transform: translateY(-2px);
+}
+
+.recycler-login-back-button:active {
+  transform: scale(0.97);
+}
+
+/* =========================
+   LISTEN BUTTON - GREEN
+========================= */
+
+.recycler-login-speaker-button {
+  border: none;
+
+  background: #25b95f;
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  transition: 0.2s ease;
+}
+
+.recycler-login-speaker-button:hover {
+  background: #1fa653;
+
+  transform: translateY(-2px);
+}
+
+.recycler-login-speaker-button:active {
+  transform: scale(0.97);
+}
+
+.recycler-login-speaker-button.speaking {
+  background: #168b48;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.recycler-login-content {
+  width: min(700px, 100%);
+
+  background: transparent;
+
+  padding: 0;
+
+  box-shadow: none;
+
+  border-radius: 0;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.recycler-login-title-area {
+  text-align: center;
+
+  margin-bottom: 22px;
+}
+
+.recycler-login-icon {
+  width: 70px;
+  height: 70px;
+
+  margin: 0 auto 12px;
+
+  border-radius: 20px;
+
+  background: #e7f7ee;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 38px;
+}
+
+.recycler-login-title-area h1 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 30px;
+}
+
+.recycler-login-title-area p {
+  margin: 8px 0 0;
+
+  color: #c9ddd3;
+
+  font-size: 15px;
+
+  line-height: 1.5;
+}
+
+/* =========================
+   GUIDANCE
+========================= */
+
+.recycler-login-guidance {
+  padding: 15px 18px;
+
+  border-radius: 15px;
+
+  background: rgba(231, 247, 238, 0.12);
+
+  border: 1px solid rgba(190, 230, 207, 0.25);
+
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+.recycler-login-guidance strong {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  margin-bottom: 5px;
+}
+
+.recycler-login-guidance span {
+  display: block;
+
+  color: #b9d3c5;
+
+  font-size: 12px;
+}
+
+/* =========================
+   MOBILE NUMBER SECTION
+   NO SEPARATE CARD
+========================= */
+
+.recycler-login-card {
+  padding: 0;
+
+  background: transparent;
+
+  border: none;
+
+  box-shadow: none;
+
+  border-radius: 0;
+}
+
+.recycler-login-card label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 800;
+}
+
+/* =========================
+   MOBILE NUMBER INPUT - BLACK
+========================= */
+
+.recycler-login-card input {
+  width: 100%;
+
+  padding: 14px 15px;
+
+  border-radius: 12px;
+
+  border: 1px solid #444;
+
+  background: #000000;
+
+  color: white;
+
+  font-size: 16px;
+
+  outline: none;
+
+  margin-bottom: 15px;
+}
+
+.recycler-login-card input:focus {
+  border-color: #25b95f;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 185, 95, 0.12);
+}
+
+.recycler-login-card input::placeholder {
+  color: #b5b5b5;
+}
+
+/* =========================
+   CONTINUE BUTTON - BLUE
+========================= */
+
+.recycler-login-continue-button {
+  width: 100%;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #1976d2;
+
+  color: white;
+
+  padding: 14px 18px;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  transition: 0.2s ease;
+}
+
+.recycler-login-continue-button:hover {
+  background: #1565c0;
+
+  transform: translateY(-2px);
+}
+
+.recycler-login-continue-button:active {
+  transform: scale(0.98);
+}
+
+/* =========================
+   SECURITY NOTE
+========================= */
+
+.recycler-login-safe-note {
+  margin-top: 18px;
+
+  text-align: center;
+
+  color: #c3d8cd;
+
+  font-size: 13px;
+}
+
+/* =========================
+   DEMO NOTE
+========================= */
+
+.recycler-login-demo-note {
+  margin-top: 12px;
+
+  text-align: center;
+
+  color: #8eada0;
+
+  font-size: 12px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 700px) {
+
+  .recycler-login-screen {
+    padding: 15px;
+  }
+
+  .recycler-login-title-area h1 {
+    font-size: 25px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 450px) {
+
+  .recycler-login-screen {
+    padding: 10px;
+  }
+
+  .recycler-login-header {
+    margin-bottom: 18px;
+  }
+
+  .recycler-login-back-button,
+  .recycler-login-speaker-button {
+    padding: 10px 13px;
+
+    font-size: 13px;
+  }
+
+  .recycler-login-icon {
+    width: 58px;
+    height: 58px;
+
+    font-size: 30px;
+  }
+
+  .recycler-login-title-area h1 {
+    font-size: 22px;
+  }
+
+  .recycler-login-title-area p {
+    font-size: 13px;
+  }
+
+  .recycler-login-guidance {
+    padding: 13px;
+  }
+
+  .recycler-login-card {
+    padding: 0;
+  }
+
+  .recycler-login-card input {
+    padding: 13px;
+
+    font-size: 15px;
+  }
+
+  .recycler-login-continue-button {
+    padding: 13px 15px;
+
+    font-size: 15px;
+  }
+}

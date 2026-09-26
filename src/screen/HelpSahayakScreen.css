@@ -1,0 +1,678 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN SCREEN
+========================================= */
+
+.help-sahayak-screen {
+  width: 100vw;
+  height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    #071b14,
+    #0b3023,
+    #063c29
+  );
+
+  color: white;
+
+  padding: 14px 20px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.help-sahayak-container {
+  width: 100%;
+  height: calc(100vh - 28px);
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 0;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.help-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding-bottom: 14px;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.help-back-button {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #25b95f;
+
+  border: 2px solid #25b95f;
+
+  color: white;
+
+  border-radius: 9px;
+
+  padding: 10px 17px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 4px 12px rgba(37, 185, 95, 0.18);
+
+  transition: 0.2s ease;
+}
+
+.help-back-button:hover {
+  background: #1fa653;
+
+  border-color: #1fa653;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   LISTEN BUTTON WRAPPER
+========================================= */
+
+.listen-button-wrapper {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  padding-bottom: 38px;
+}
+
+
+/* =========================================
+   LISTEN BUTTON
+========================================= */
+
+.help-speaker-button {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 125px;
+
+  background: #25b95f;
+
+  border: 2px solid #25b95f;
+
+  border-radius: 9px;
+
+  color: white;
+
+  padding: 10px 17px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 12px rgba(37, 185, 95, 0.18);
+
+  transition: 0.2s ease;
+
+  z-index: 5;
+}
+
+.help-speaker-button:hover {
+  background: #1fa653;
+
+  border-color: #1fa653;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   LISTEN INDICATOR
+========================================= */
+
+.listen-indicator {
+  position: absolute;
+
+  top: 42px;
+
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   CONCENTRIC CIRCLES
+========================================= */
+
+.listen-ripple {
+  position: absolute;
+
+  width: 25px;
+  height: 25px;
+
+  border: 2px solid #25b95f;
+
+  border-radius: 50%;
+
+  opacity: 0;
+
+  animation: listenRipple 2.4s infinite;
+}
+
+.ripple-one {
+  animation-delay: 0s;
+}
+
+.ripple-two {
+  animation-delay: 0.8s;
+}
+
+.ripple-three {
+  animation-delay: 1.6s;
+}
+
+
+@keyframes listenRipple {
+
+  0% {
+    width: 20px;
+    height: 20px;
+
+    opacity: 0.8;
+  }
+
+  100% {
+    width: 70px;
+    height: 70px;
+
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   FINGER
+========================================= */
+
+.listen-finger {
+  position: relative;
+
+  z-index: 4;
+
+  font-size: 28px;
+
+  transform: rotate(-10deg);
+
+  animation: fingerTap 1.5s infinite;
+}
+
+
+@keyframes fingerTap {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(-10deg);
+  }
+
+  50% {
+    transform: translateY(5px) rotate(-10deg);
+  }
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.help-content {
+  flex: 1;
+
+  min-height: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   TITLE AREA
+========================================= */
+
+.help-title-area {
+  text-align: center;
+
+  margin-bottom: 10px;
+}
+
+.help-title-icon {
+  font-size: 32px;
+
+  margin-bottom: 3px;
+}
+
+.help-title-area h1 {
+  margin: 0;
+
+  font-size: 26px;
+
+  font-weight: 800;
+
+  color: white;
+}
+
+.help-title-area p {
+  margin: 3px 0 0;
+
+  font-size: 13px;
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================================
+   GUIDANCE
+========================================= */
+
+.help-guidance {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  text-align: center;
+
+  padding: 9px 15px;
+
+  margin-bottom: 12px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.help-guidance strong {
+  font-size: 14px;
+
+  color: white;
+}
+
+.help-guidance span {
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================
+   HELP OPTIONS
+========================================= */
+
+.help-options {
+  flex: 1;
+
+  min-height: 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 12px;
+
+  margin-bottom: 12px;
+}
+
+
+/* =========================================
+   HELP CARD
+========================================= */
+
+.help-option-card {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  min-width: 0;
+  min-height: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  border-radius: 13px;
+
+  color: white;
+
+  padding: 18px 14px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  overflow: hidden;
+}
+
+.help-option-card:hover {
+  background: rgba(37, 185, 95, 0.13);
+
+  border-color: rgba(37, 185, 95, 0.5);
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   CARD ICON
+========================================= */
+
+.help-option-icon {
+  font-size: 38px;
+
+  margin-bottom: 12px;
+}
+
+
+/* =========================================
+   CARD TEXT
+========================================= */
+
+.help-option-text {
+  width: 100%;
+}
+
+.help-option-text h2 {
+  margin: 0 0 7px;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  line-height: 1.25;
+
+  color: white;
+}
+
+.help-option-text p {
+  margin: 0;
+
+  font-size: 12px;
+
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.72);
+}
+
+
+/* =========================================
+   CARD ARROW
+========================================= */
+
+.help-option-arrow {
+  margin-top: 15px;
+
+  font-size: 24px;
+
+  font-weight: 700;
+
+  color: #25b95f;
+}
+
+
+/* =========================================
+   SAFE NOTE
+========================================= */
+
+.help-safe-note {
+  width: 100%;
+
+  text-align: center;
+
+  padding: 8px 12px;
+
+  margin-bottom: 6px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 193, 7, 0.08);
+
+  border: 1px solid rgba(255, 193, 7, 0.15);
+
+  color: white;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   DEMO NOTE
+========================================= */
+
+.help-demo-note {
+  width: 100%;
+
+  text-align: center;
+
+  font-size: 11px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  padding-bottom: 2px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .help-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .help-option-card {
+    min-height: 150px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .help-sahayak-screen {
+    padding: 10px 12px;
+
+    overflow-y: auto;
+  }
+
+  .help-sahayak-container {
+    height: auto;
+
+    min-height: calc(100vh - 20px);
+  }
+
+  .help-header {
+    gap: 8px;
+  }
+
+  .help-back-button,
+  .help-speaker-button {
+    padding: 9px 12px;
+
+    font-size: 14px;
+
+    min-width: auto;
+  }
+
+  .listen-button-wrapper {
+    padding-bottom: 35px;
+  }
+
+  .listen-indicator {
+    top: 40px;
+  }
+
+  .help-title-area {
+    margin-top: 5px;
+  }
+
+  .help-title-area h1 {
+    font-size: 22px;
+  }
+
+  .help-title-icon {
+    font-size: 28px;
+  }
+
+  .help-guidance {
+    padding: 8px 10px;
+  }
+
+  .help-options {
+    grid-template-columns: 1fr;
+
+    flex: none;
+
+    gap: 10px;
+  }
+
+  .help-option-card {
+    min-height: 120px;
+
+    flex-direction: row;
+
+    text-align: left;
+
+    justify-content: flex-start;
+
+    padding: 14px;
+  }
+
+  .help-option-icon {
+    font-size: 32px;
+
+    margin: 0 14px 0 0;
+  }
+
+  .help-option-text {
+    flex: 1;
+  }
+
+  .help-option-text h2 {
+    font-size: 16px;
+  }
+
+  .help-option-text p {
+    font-size: 12px;
+  }
+
+  .help-option-arrow {
+    margin: 0 0 0 10px;
+  }
+
+  .help-safe-note {
+    margin-top: 10px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .help-back-button,
+  .help-speaker-button {
+    font-size: 13px;
+
+    padding: 8px 10px;
+  }
+
+  .listen-finger {
+    font-size: 24px;
+  }
+
+  .listen-indicator {
+    top: 38px;
+  }
+
+  .help-title-area h1 {
+    font-size: 20px;
+  }
+
+  .help-option-card {
+    min-height: 105px;
+  }
+}

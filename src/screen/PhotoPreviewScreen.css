@@ -1,0 +1,315 @@
+.photo-preview-screen {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #071a2d,
+    #0d2940,
+    #123d52
+  );
+
+  padding: 30px;
+
+  color: white;
+
+  box-sizing: border-box;
+}
+
+.photo-preview-container {
+  width: 100%;
+  max-width: 850px;
+
+  margin: 70px auto 0;
+
+  text-align: center;
+}
+
+.photo-preview-header {
+  margin-bottom: 30px;
+}
+
+.photo-preview-icon {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #21c47b;
+
+  color: white;
+
+  font-size: 34px;
+  font-weight: bold;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.photo-preview-header h1 {
+  margin: 0;
+
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.photo-preview-header p {
+  margin-top: 10px;
+
+  font-size: 17px;
+
+  color: #d7e4eb;
+}
+
+.photo-preview-card {
+  width: 100%;
+  max-width: 650px;
+
+  height: 400px;
+
+  margin: 0 auto 30px;
+
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.3);
+
+  overflow: hidden;
+}
+
+.photo-preview-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  border-radius: 15px;
+}
+
+.photo-preview-empty {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #173b2c;
+
+  font-size: 60px;
+}
+
+.photo-preview-empty p {
+  font-size: 17px;
+}
+
+.photo-preview-continue {
+  border: none;
+
+  background: #21c47b;
+
+  color: white;
+
+  padding: 15px 32px;
+
+  border-radius: 14px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.2);
+
+  transition: 0.2s ease;
+}
+
+.photo-preview-continue span {
+  margin-left: 12px;
+  font-size: 22px;
+}
+
+.photo-preview-continue:hover {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+
+  .photo-preview-screen {
+    padding: 20px;
+  }
+
+  .photo-preview-container {
+    margin-top: 60px;
+  }
+
+  .photo-preview-header h1 {
+    font-size: 28px;
+  }
+
+  .photo-preview-header p {
+    font-size: 15px;
+  }
+
+  .photo-preview-card {
+    height: 320px;
+  }
+
+}
+
+
+
+/* ==========================================
+   PHOTO PREVIEW CONTINUE GUIDE
+   ========================================== */
+
+.photo-preview-continue-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 75px;
+  margin-bottom: 100px;
+}
+
+
+/* FINGER EFFECT */
+
+.photo-preview-finger-effect {
+  position: absolute;
+
+  left: 50%;
+  top: 65px;
+
+  width: 90px;
+  height: 90px;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+
+/* FINGER */
+
+.photo-preview-finger {
+  position: absolute;
+
+  left: 50%;
+  top: -20px;
+
+  transform: translateX(-50%);
+
+  font-size: 38px;
+
+  animation: photoPreviewFingerFloat 1.4s ease-in-out infinite;
+}
+
+
+/* CONCENTRIC CIRCLES */
+
+.photo-preview-ring {
+  position: absolute;
+
+  left: 50%;
+  top: 10%;
+
+  width: 42px;
+  height: 42px;
+
+  border: 3px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+
+  animation: photoPreviewRingPulse 2.4s ease-out infinite;
+}
+
+
+/* SECOND CIRCLE */
+
+.photo-preview-ring.ring-2 {
+  animation-delay: 0.45s;
+}
+
+
+/* THIRD CIRCLE */
+
+.photo-preview-ring.ring-3 {
+  animation-delay: 0.9s;
+}
+
+
+/* FINGER MOVEMENT */
+
+@keyframes photoPreviewFingerFloat {
+
+  0% {
+    transform: translate(-50%, 0);
+  }
+
+  50% {
+    transform: translate(-50%, -10px);
+  }
+
+  100% {
+    transform: translate(-50%, 0);
+  }
+
+}
+
+
+/* CIRCLE PULSE */
+
+@keyframes photoPreviewRingPulse {
+
+  0% {
+    width: 25px;
+    height: 25px;
+    opacity: 0.9;
+  }
+
+  70% {
+    width: 78px;
+    height: 78px;
+    opacity: 0;
+  }
+
+  100% {
+    width: 78px;
+    height: 78px;
+    opacity: 0;
+  }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+  .photo-preview-continue-wrapper {
+    margin-top: 70px;
+  }
+
+  .photo-preview-finger {
+    font-size: 34px;
+  }
+
+}

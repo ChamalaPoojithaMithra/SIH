@@ -1,0 +1,519 @@
+/* =========================================
+   OTP VERIFICATION SCREEN
+========================================= */
+
+.otp-verification-screen {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(20, 70, 130, 0.45),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(0, 150, 90, 0.22),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #06142f 0%,
+      #020711 48%,
+      #000000 100%
+    );
+
+  color: white;
+
+  padding: 40px 30px 60px;
+
+  position: relative;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.otp-container {
+  width: 100%;
+  max-width: 520px;
+
+  margin: 100px auto 0;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.otp-icon {
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 22px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 42px;
+
+  background: rgba(34, 197, 94, 0.15);
+
+  border: 1px solid rgba(80, 180, 255, 0.35);
+
+  box-shadow:
+    0 0 30px rgba(40, 150, 255, 0.15);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.otp-container h1 {
+  margin: 0;
+
+  font-size: 40px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.otp-subtitle {
+  margin-top: 12px;
+
+  font-size: 17px;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.otp-form {
+  margin-top: 45px;
+
+  text-align: left;
+}
+
+.otp-form label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   OTP INPUT
+========================================= */
+
+.otp-form input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 17px 18px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(80, 180, 255, 0.4);
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  font-size: 20px;
+
+  letter-spacing: 6px;
+
+  text-align: center;
+}
+
+.otp-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+
+  letter-spacing: 0;
+}
+
+.otp-form input:focus {
+  border-color: #50b4ff;
+
+  box-shadow:
+    0 0 18px rgba(80, 180, 255, 0.18);
+}
+
+
+/* =========================================
+   PHONE NUMBER
+========================================= */
+
+.otp-phone {
+  margin: 12px 0 0;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   VERIFY BUTTON
+========================================= */
+
+.otp-verify-button {
+  width: 100%;
+
+  margin-top: 28px;
+
+  padding: 17px 24px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1684d8,
+      #0b5fa8
+    );
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.otp-verify-button span {
+  font-size: 22px;
+}
+
+.otp-verify-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(40, 150, 255, 0.25);
+}
+
+.otp-verify-button:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   RESEND
+========================================= */
+
+.otp-resend-button {
+  display: block;
+
+  margin: 20px auto 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #50b4ff;
+
+  font-size: 15px;
+
+  cursor: pointer;
+}
+
+.otp-resend-button:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   DEMO OTP
+========================================= */
+
+.otp-demo {
+  margin-top: 18px;
+
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   SPEAKER
+========================================= */
+
+.otp-speaker-wrapper {
+  position: fixed;
+
+  top: 20px;
+  right: 35px;
+
+  width: 110px;
+  height: 120px;
+
+  z-index: 9999;
+}
+
+.otp-speaker-button {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 110px;
+  height: 60px;
+
+  border: none;
+
+  border-radius: 35px;
+
+  background: #22c55e;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 10002;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.otp-speaker-button img {
+  width: 30px;
+  height: 30px;
+
+  object-fit: contain;
+
+  filter: brightness(0) invert(1);
+}
+
+.otp-speaker-button:hover {
+  background: #16a34a;
+
+  transform: scale(1.05);
+}
+
+.otp-speaker-button.speaking {
+  animation:
+    otpSpeakerPulse
+    1s ease-in-out infinite;
+}
+
+@keyframes otpSpeakerPulse {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================
+   FINGER
+========================================= */
+
+.otp-finger-effect {
+  position: absolute;
+
+  left: 55px;
+  top: 75px;
+
+  width: 60px;
+  height: 60px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+
+  z-index: 10003;
+}
+
+.otp-finger {
+  position: relative;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  z-index: 10005;
+
+  animation:
+    otpFingerMove
+    1.5s ease-in-out infinite;
+}
+
+@keyframes otpFingerMove {
+
+  0% {
+    transform: translateY(3px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(3px);
+  }
+
+}
+
+
+/* =========================================
+   RINGS
+========================================= */
+
+.otp-ring {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 38px;
+  height: 38px;
+
+  border: 2px solid rgba(80, 180, 255, 0.8);
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.5);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 10004;
+}
+
+.otp-ring.ring-1 {
+  animation:
+    otpRing
+    2s linear infinite;
+}
+
+.otp-ring.ring-2 {
+  animation:
+    otpRing
+    2s linear infinite 0.65s;
+}
+
+.otp-ring.ring-3 {
+  animation:
+    otpRing
+    2s linear infinite 1.3s;
+}
+
+@keyframes otpRing {
+
+  0% {
+    transform:
+      translate(-50%, -50%)
+      scale(0.5);
+
+    opacity: 0.9;
+  }
+
+  100% {
+    transform:
+      translate(-50%, -50%)
+      scale(2.4);
+
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .otp-verification-screen {
+    padding: 30px 18px 45px;
+  }
+
+  .otp-container {
+    margin-top: 85px;
+  }
+
+  .otp-container h1 {
+    font-size: 30px;
+  }
+
+  .otp-subtitle {
+    font-size: 14px;
+  }
+
+  .otp-speaker-wrapper {
+    top: 18px;
+    right: 14px;
+
+    width: 90px;
+    height: 100px;
+  }
+
+  .otp-speaker-button {
+    width: 90px;
+    height: 50px;
+  }
+
+  .otp-finger-effect {
+    left: 45px;
+    top: 65px;
+  }
+
+}

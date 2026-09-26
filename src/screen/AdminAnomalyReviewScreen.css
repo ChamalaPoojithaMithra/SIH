@@ -1,0 +1,901 @@
+/* =========================================
+   MAIN SCREEN
+========================================= */
+
+.admin-anomaly-screen {
+  width: 100vw;
+  height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071b14,
+      #0b3023,
+      #063c29
+    );
+
+  color: white;
+
+  padding: 16px 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TOP NAVIGATION
+========================================= */
+
+.admin-anomaly-top {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  margin-bottom: 8px;
+}
+
+.admin-anomaly-back {
+  border: none;
+
+  background: #25b95f;
+  color: white;
+
+  padding: 9px 16px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.admin-anomaly-back:hover {
+  background: #20a954;
+
+  transform: translateY(-1px);
+}
+
+.admin-anomaly-top-title {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.admin-anomaly-container {
+  width: 100%;
+
+  flex: 1;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-anomaly-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  flex-shrink: 0;
+}
+
+.admin-anomaly-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.admin-anomaly-logo {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 15px;
+
+  background: rgba(255, 193, 7, 0.12);
+
+  border: 1px solid rgba(255, 193, 7, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  flex-shrink: 0;
+}
+
+.admin-anomaly-heading h1 {
+  margin: 0;
+
+  font-size: 25px;
+
+  font-weight: 800;
+
+  color: white;
+}
+
+.admin-anomaly-heading p {
+  margin: 4px 0 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   TOTAL BOX
+========================================= */
+
+.admin-anomaly-total-box {
+  min-width: 165px;
+
+  padding: 11px 15px;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  flex-shrink: 0;
+}
+
+.admin-anomaly-total-box > span {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 193, 7, 0.13);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+.admin-anomaly-total-box div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.admin-anomaly-total-box strong {
+  font-size: 21px;
+
+  line-height: 1;
+}
+
+.admin-anomaly-total-box small {
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* =========================================
+   IMPORTANT NOTE
+========================================= */
+
+.admin-anomaly-note {
+  width: 100%;
+
+  padding: 9px 13px;
+
+  border-radius: 11px;
+
+  background: rgba(255, 193, 7, 0.08);
+
+  border: 1px solid rgba(255, 193, 7, 0.18);
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  box-sizing: border-box;
+
+  flex-shrink: 0;
+}
+
+.admin-anomaly-note > span {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 193, 7, 0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+
+  flex-shrink: 0;
+}
+
+.admin-anomaly-note strong {
+  display: block;
+
+  font-size: 11px;
+
+  color: #ffd35c;
+}
+
+.admin-anomaly-note p {
+  margin: 2px 0 0;
+
+  font-size: 10px;
+
+  line-height: 1.35;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* =========================================
+   SUMMARY GRID
+========================================= */
+
+.admin-anomaly-summary-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.admin-anomaly-summary-card {
+  min-height: 66px;
+
+  padding: 10px 13px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  box-sizing: border-box;
+}
+
+.admin-anomaly-summary-icon {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 9px;
+
+  background: rgba(37, 185, 95, 0.14);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+
+  flex-shrink: 0;
+}
+
+.admin-anomaly-summary-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.admin-anomaly-summary-card span {
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.admin-anomaly-summary-card strong {
+  font-size: 19px;
+
+  color: white;
+}
+
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.admin-anomaly-filters {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 180px;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.admin-anomaly-search {
+  height: 42px;
+
+  padding: 0 13px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  box-sizing: border-box;
+}
+
+.admin-anomaly-search > span {
+  font-size: 14px;
+
+  opacity: 0.7;
+}
+
+.admin-anomaly-search input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 12px;
+}
+
+.admin-anomaly-search input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.admin-anomaly-filters select {
+  height: 42px;
+
+  padding: 0 12px;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: #0b2b20;
+
+  color: white;
+
+  font-size: 12px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.admin-anomaly-filters select option {
+  background: #0b2b20;
+
+  color: white;
+}
+
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+.admin-anomaly-table-card {
+  flex: 1;
+  min-height: 0;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+/* =========================================
+   TABLE HEADING
+========================================= */
+
+.admin-anomaly-table-heading {
+  padding: 12px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-anomaly-table-heading h2 {
+  margin: 0;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  color: white;
+}
+
+.admin-anomaly-table-heading p {
+  margin: 3px 0 0;
+
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.admin-anomaly-table-wrapper {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow: auto;
+
+  width: 100%;
+}
+
+.admin-anomaly-table-wrapper::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.admin-anomaly-table-wrapper::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.admin-anomaly-table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(37, 185, 95, 0.45);
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.admin-anomaly-table-wrapper table {
+  width: 100%;
+
+  min-width: 1150px;
+
+  border-collapse: collapse;
+
+  font-size: 11px;
+}
+
+.admin-anomaly-table-wrapper th {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 2;
+
+  padding: 10px 11px;
+
+  text-align: left;
+
+  background: #0b2b20;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.admin-anomaly-table-wrapper td {
+  padding: 10px 11px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+.admin-anomaly-table-wrapper tbody tr {
+  transition: 0.15s ease;
+}
+
+.admin-anomaly-table-wrapper tbody tr:hover {
+  background: rgba(37, 185, 95, 0.05);
+}
+
+
+/* =========================================
+   ANOMALY ID
+========================================= */
+
+.admin-anomaly-id {
+  color: #25b95f;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   ISSUE
+========================================= */
+
+.admin-anomaly-issue {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.admin-anomaly-issue > span:first-child {
+  width: 25px;
+  height: 25px;
+
+  border-radius: 7px;
+
+  background: rgba(255, 193, 7, 0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 11px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admin-anomaly-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.admin-anomaly-status.review {
+  background: rgba(255, 193, 7, 0.12);
+
+  color: #ffd35c;
+
+  border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+.admin-anomaly-status.needs-investigation {
+  background: rgba(244, 67, 54, 0.12);
+
+  color: #ff8585;
+
+  border: 1px solid rgba(244, 67, 54, 0.2);
+}
+
+.admin-anomaly-status.reviewed {
+  background: rgba(37, 185, 95, 0.14);
+
+  color: #55df88;
+
+  border: 1px solid rgba(37, 185, 95, 0.25);
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.admin-anomaly-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.admin-anomaly-actions button {
+  border: none;
+
+  border-radius: 7px;
+
+  padding: 6px 9px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.15s ease;
+
+  white-space: nowrap;
+}
+
+
+/* REVIEW */
+
+.admin-anomaly-view-button {
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+}
+
+.admin-anomaly-view-button:hover {
+  background: #25b95f;
+
+  transform: translateY(-1px);
+}
+
+
+/* MARK REVIEWED */
+
+.admin-anomaly-reviewed-button {
+  background: rgba(37, 185, 95, 0.14);
+
+  color: #55df88;
+
+  border: 1px solid rgba(37, 185, 95, 0.2) !important;
+}
+
+.admin-anomaly-reviewed-button:hover {
+  background: #25b95f;
+
+  color: white;
+}
+
+
+/* INVESTIGATE */
+
+.admin-anomaly-investigate-button {
+  background: rgba(255, 193, 7, 0.12);
+
+  color: #ffd35c;
+
+  border: 1px solid rgba(255, 193, 7, 0.2) !important;
+}
+
+.admin-anomaly-investigate-button:hover {
+  background: rgba(255, 193, 7, 0.22);
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.admin-anomaly-empty {
+  height: 250px;
+
+  text-align: center;
+}
+
+.admin-anomaly-empty > div {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.admin-anomaly-empty span {
+  font-size: 27px;
+
+  opacity: 0.5;
+}
+
+.admin-anomaly-empty strong {
+  font-size: 13px;
+
+  color: white;
+}
+
+.admin-anomaly-empty p {
+  margin: 0;
+
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .admin-anomaly-screen {
+    height: auto;
+
+    min-height: 100vh;
+
+    overflow-y: auto;
+
+    padding: 14px 16px;
+  }
+
+  .admin-anomaly-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-anomaly-table-card {
+    min-height: 430px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .admin-anomaly-screen {
+    padding: 12px;
+  }
+
+  .admin-anomaly-top-title {
+    display: none;
+  }
+
+  .admin-anomaly-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .admin-anomaly-heading {
+    align-items: flex-start;
+  }
+
+  .admin-anomaly-logo {
+    width: 48px;
+    height: 48px;
+
+    font-size: 24px;
+  }
+
+  .admin-anomaly-heading h1 {
+    font-size: 20px;
+  }
+
+  .admin-anomaly-heading p {
+    font-size: 10px;
+
+    line-height: 1.4;
+  }
+
+  .admin-anomaly-total-box {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .admin-anomaly-note {
+    align-items: flex-start;
+  }
+
+  .admin-anomaly-summary-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+  .admin-anomaly-summary-card {
+    min-height: 62px;
+
+    padding: 8px;
+  }
+
+  .admin-anomaly-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-anomaly-table-card {
+    min-height: 430px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .admin-anomaly-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-anomaly-heading h1 {
+    font-size: 18px;
+  }
+}

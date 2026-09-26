@@ -1,0 +1,805 @@
+/* ==========================================
+   MAIN SCREEN
+   ========================================== */
+
+.ewaste-identification-screen {
+  min-height: 100vh;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      135deg,
+      #061b32,
+      #092f52,
+      #0b4165
+    );
+
+  color: white;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   SPEAKER AREA
+   ========================================== */
+
+.identification-speaker-area {
+  position: absolute;
+
+  top: 25px;
+
+  right: 30px;
+
+  width: 150px;
+
+  height: 150px;
+
+  z-index: 30;
+}
+
+
+/* ==========================================
+   GREEN OVAL LISTEN BUTTON
+   ========================================== */
+
+.ewaste-identification-speaker {
+  position: absolute;
+
+  top: 0;
+
+  right: 0;
+
+  height: 52px;
+
+  padding: 0 22px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #22c55e;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 18px
+    rgba(0, 0, 0, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.ewaste-identification-speaker:hover {
+  transform: scale(1.06);
+
+  box-shadow:
+    0 8px 24px
+    rgba(0, 0, 0, 0.3);
+}
+
+.ewaste-identification-speaker:active {
+  transform: scale(0.96);
+}
+
+.speaker-icon {
+  font-size: 22px;
+}
+
+
+/* ==========================================
+   FINGER EFFECT AREA
+   ========================================== */
+
+.speaker-finger-effect {
+  position: absolute;
+
+  top: 35px;
+
+  right: -15px;
+
+  width: 105px;
+
+  height: 105px;
+
+  pointer-events: none;
+
+  z-index: 10;
+}
+
+
+/* ==========================================
+   FINGER
+   ========================================== */
+
+.speaker-finger {
+  position: absolute;
+
+  top: 27px;
+
+  left: 50%;
+
+  font-size: 40px;
+
+  z-index: 5;
+
+  animation:
+    speakerFingerMove
+    2.2s
+    ease-in-out
+    infinite;
+}
+
+
+/* ==========================================
+   CONCENTRIC CIRCLES
+   ========================================== */
+
+.speaker-ring {
+  position: absolute;
+
+  top: 50%;
+
+  left: 50%;
+
+  width: 25px;
+
+  height: 25px;
+
+  border:
+    3px solid
+    rgba(34, 197, 94, 0.9);
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  animation:
+    speakerRingPulse
+    2.4s
+    ease-out
+    infinite;
+}
+
+.speaker-ring-2 {
+  animation-delay: 0.5s;
+}
+
+.speaker-ring-3 {
+  animation-delay: 1s;
+}
+
+
+/* ==========================================
+   FINGER MOVEMENT
+   LEFT → SPEAKER
+   ========================================== */
+
+@keyframes speakerFingerMove {
+
+  /* Start from the left */
+  0% {
+    transform: translateX(-75px);
+    opacity: 0;
+  }
+
+  /* Appear */
+  15% {
+    transform: translateX(-60px);
+    opacity: 1;
+  }
+
+  /* Move toward speaker */
+  45% {
+    transform: translateX(-30px);
+    opacity: 1;
+  }
+
+  /* Reach speaker */
+  70% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* Stay at speaker */
+  85% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  /* Disappear */
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+}
+
+
+/* ==========================================
+   CIRCLE ANIMATION
+   ========================================== */
+
+@keyframes speakerRingPulse {
+
+  0% {
+    width: 25px;
+
+    height: 25px;
+
+    opacity: 0.9;
+  }
+
+  70% {
+    width: 90px;
+
+    height: 90px;
+
+    opacity: 0;
+  }
+
+  100% {
+    width: 90px;
+
+    height: 90px;
+
+    opacity: 0;
+  }
+
+}
+
+
+/* ==========================================
+   BACK BUTTON
+   ========================================== */
+
+.back-button {
+  position: absolute;
+
+  top: 30px;
+
+  left: 30px;
+
+  border: none;
+
+  background: white;
+
+  color: #09243f;
+
+  padding: 11px 18px;
+
+  border-radius: 10px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  z-index: 20;
+}
+
+
+/* ==========================================
+   MAIN CONTAINER
+   ========================================== */
+
+.ewaste-identification-container {
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  padding-top: 30px;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   HEADER
+   ========================================== */
+
+.ewaste-identification-header {
+  text-align: center;
+
+  margin-bottom: 25px;
+}
+
+.ewaste-identification-icon {
+  font-size: 50px;
+
+  margin-bottom: 8px;
+}
+
+.ewaste-identification-header h1 {
+  margin: 0;
+
+  font-size: 34px;
+
+  font-weight: 700;
+}
+
+.ewaste-identification-header p {
+  margin-top: 10px;
+
+  font-size: 17px;
+
+  opacity: 0.85;
+}
+
+
+/* ==========================================
+   PHOTO CARD
+   ========================================== */
+
+.ewaste-identification-photo-card {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 500px;
+
+  height: 300px;
+
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.2);
+}
+
+.ewaste-identification-photo {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+  background: #061b32;
+}
+
+.ewaste-identification-no-photo {
+  width: 100%;
+
+  height: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 50px;
+}
+
+.ewaste-identification-no-photo p {
+  font-size: 16px;
+}
+
+
+/* ==========================================
+   SCANNING OVERLAY
+   ========================================== */
+
+.ewaste-scanning-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    rgba(3, 20, 38, 0.68);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* ==========================================
+   SCAN LINE
+   ========================================== */
+
+.ewaste-scan-line {
+  position: absolute;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 3px;
+
+  background: #22c55e;
+
+  box-shadow:
+    0 0 15px #22c55e;
+
+  animation:
+    scanAnimation
+    2s
+    linear
+    infinite;
+}
+
+@keyframes scanAnimation {
+
+  0% {
+    top: 0;
+  }
+
+  100% {
+    top: 100%;
+  }
+
+}
+
+
+/* ==========================================
+   SPINNER
+   ========================================== */
+
+.ewaste-spinner {
+  width: 50px;
+
+  height: 50px;
+
+  border:
+    4px solid
+    rgba(255, 255, 255, 0.25);
+
+  border-top-color: #22c55e;
+
+  border-radius: 50%;
+
+  animation:
+    spinnerAnimation
+    1s
+    linear
+    infinite;
+}
+
+@keyframes spinnerAnimation {
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* ==========================================
+   IDENTIFICATION RESULT
+   ========================================== */
+
+.ewaste-identification-result {
+  width: 100%;
+
+  max-width: 500px;
+
+  margin: 25px auto 0;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  background:
+    rgba(34, 197, 94, 0.15);
+
+  border:
+    1px solid
+    rgba(34, 197, 94, 0.4);
+
+  border-radius: 18px;
+}
+
+.ewaste-result-icon {
+  font-size: 48px;
+}
+
+.ewaste-result-content p {
+  margin: 0;
+
+  font-size: 14px;
+
+  opacity: 0.8;
+}
+
+.ewaste-result-content h2 {
+  margin: 5px 0;
+
+  font-size: 25px;
+}
+
+.ewaste-result-content span {
+  color: #86efac;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* ==========================================
+   ERROR
+   ========================================== */
+
+.ewaste-identification-error {
+  margin-top: 20px;
+
+  padding: 16px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255, 80, 80, 0.15);
+
+  color: white;
+
+  text-align: center;
+}
+
+.try-again-button {
+  margin-top: 12px;
+
+  padding: 10px 18px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+
+/* ==========================================
+   WEIGHT
+   ========================================== */
+
+.weight-section {
+  width: 100%;
+
+  max-width: 500px;
+
+  margin: 25px auto 0;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.15);
+
+  border-radius: 18px;
+}
+
+.weight-section h2 {
+  margin: 0 0 15px;
+
+  font-size: 20px;
+}
+
+.weight-input-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.weight-input-row input {
+  flex: 1;
+
+  padding: 14px 16px;
+
+  border: none;
+
+  outline: none;
+
+  border-radius: 10px;
+
+  font-size: 17px;
+
+  box-sizing: border-box;
+}
+
+.weight-unit {
+  padding: 14px 16px;
+
+  background: white;
+
+  color: #09243f;
+
+  border-radius: 10px;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   CONTINUE BUTTON
+   ========================================== */
+
+.identification-continue-wrapper {
+  width: 100%;
+
+  max-width: 500px;
+
+  margin: 35px auto 50px;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.ewaste-identification-continue {
+  width: 100%;
+
+  padding: 16px 24px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #22c55e;
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  box-shadow:
+    0 8px 20px
+    rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform 0.2s ease;
+}
+
+.ewaste-identification-continue:hover {
+  transform: translateY(-2px);
+}
+
+.ewaste-identification-continue:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+
+  transform: none;
+
+  box-shadow: none;
+}
+
+
+/* ==========================================
+   MOBILE
+   ========================================== */
+
+@media (max-width: 600px) {
+
+  .ewaste-identification-screen {
+    padding: 20px;
+  }
+
+  .back-button {
+    top: 18px;
+
+    left: 18px;
+
+    padding: 9px 14px;
+
+    font-size: 14px;
+  }
+
+  .identification-speaker-area {
+    top: 18px;
+
+    right: 18px;
+
+    width: 135px;
+
+    height: 135px;
+  }
+
+  .ewaste-identification-speaker {
+    height: 46px;
+
+    padding: 0 16px;
+
+    font-size: 15px;
+  }
+
+  .speaker-icon {
+    font-size: 19px;
+  }
+
+  .speaker-finger-effect {
+    top: 32px;
+
+    right: -10px;
+  }
+
+  .ewaste-identification-container {
+    padding-top: 55px;
+  }
+
+  .ewaste-identification-header h1 {
+    font-size: 28px;
+  }
+
+  .ewaste-identification-photo-card {
+    height: 250px;
+  }
+
+  .weight-section {
+    padding: 16px;
+  }
+
+  .weight-section h2 {
+    font-size: 18px;
+  }
+
+  .weight-input-row input {
+    font-size: 16px;
+  }
+
+}

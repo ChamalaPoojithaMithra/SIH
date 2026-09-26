@@ -1,0 +1,316 @@
+.pickup-feasibility-screen {
+  min-height: 100vh;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f1f5f9;
+}
+
+.pickup-feasibility-card {
+  width: 100%;
+  max-width: 850px;
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+/* BACK BUTTON */
+
+.pickup-feasibility-back {
+  border: none;
+  background: transparent;
+  color: #334155;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+/* HEADER */
+
+.pickup-feasibility-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.pickup-feasibility-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: #dbeafe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.pickup-feasibility-header h1 {
+  margin: 0 0 5px;
+  font-size: 27px;
+  color: #0f172a;
+}
+
+.pickup-feasibility-header h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+  color: #1d4ed8;
+}
+
+.pickup-feasibility-header p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* FEASIBLE BOX */
+
+.pickup-feasible-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 20px;
+  margin-bottom: 22px;
+
+  border-radius: 17px;
+
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.pickup-feasible-check {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #16a34a;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.pickup-feasible-box h3 {
+  margin: 0 0 5px;
+  color: #166534;
+  font-size: 19px;
+}
+
+.pickup-feasible-box p {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* SUMMARY */
+
+.pickup-feasibility-summary {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 22px;
+}
+
+.pickup-feasibility-item {
+  padding: 19px;
+
+  border-radius: 16px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.pickup-summary-icon {
+  font-size: 25px;
+}
+
+.pickup-feasibility-item small {
+  color: #64748b;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.pickup-feasibility-item strong {
+  color: #0f172a;
+
+  font-size: 18px;
+}
+
+/* ROUTE CHECK */
+
+.pickup-route-check {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 19px;
+
+  margin-bottom: 15px;
+
+  border-radius: 16px;
+
+  background: #eff6ff;
+
+  border: 1px solid #bfdbfe;
+}
+
+.pickup-route-check-icon {
+  width: 44px;
+
+  height: 44px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 21px;
+
+  font-weight: 900;
+}
+
+.pickup-route-check h3 {
+  margin: 0 0 5px;
+
+  color: #1e3a8a;
+
+  font-size: 17px;
+}
+
+.pickup-route-check p {
+  margin: 0;
+
+  color: #475569;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+/* FINGER GUIDANCE */
+
+.pickup-feasibility-guidance {
+  text-align: center;
+
+  font-size: 30px;
+
+  margin: 10px 0;
+
+  animation: pickupFingerBounce 1.2s ease-in-out infinite;
+}
+
+@keyframes pickupFingerBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+/* CONTINUE BUTTON */
+
+.pickup-feasibility-button {
+  width: 100%;
+
+  padding: 17px 20px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #16a34a;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.pickup-feasibility-button:hover {
+  background: #15803d;
+
+  transform: translateY(-1px);
+}
+
+.pickup-feasibility-button:active {
+  transform: scale(0.98);
+}
+
+.pickup-feasibility-button span {
+  margin-left: 10px;
+
+  font-size: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .pickup-feasibility-screen {
+    padding: 16px;
+  }
+
+  .pickup-feasibility-card {
+    padding: 20px;
+  }
+
+  .pickup-feasibility-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .pickup-feasibility-header h1 {
+    font-size: 22px;
+  }
+
+  .pickup-feasibility-header h2 {
+    font-size: 18px;
+  }
+
+  .pickup-feasible-box {
+    align-items: flex-start;
+  }
+}

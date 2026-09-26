@@ -1,0 +1,154 @@
+.photo-choice-screen {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at top,
+      #123b70 0%,
+      #081b35 45%,
+      #030b17 100%
+    );
+
+  color: white;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.photo-choice-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 90px auto 40px;
+}
+
+.photo-choice-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.photo-choice-icon {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(34, 197, 94, 0.15);
+  border: 2px solid rgba(34, 197, 94, 0.6);
+
+  font-size: 36px;
+}
+
+.photo-choice-header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.photo-choice-header p {
+  margin-top: 12px;
+  color: #cbd5e1;
+  font-size: 17px;
+}
+
+.photo-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.photo-choice-card {
+  padding: 0;
+  overflow: hidden;
+
+  border: 1px solid rgba(80, 180, 255, 0.35);
+  border-radius: 22px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.photo-choice-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #22c55e;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.35),
+    0 0 25px rgba(34, 197, 94, 0.15);
+}
+
+.photo-choice-image-wrapper {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  background: #0b1728;
+}
+
+.photo-choice-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.3s ease;
+}
+
+.photo-choice-card:hover .photo-choice-image {
+  transform: scale(1.05);
+}
+
+.photo-choice-content {
+  padding: 24px;
+}
+
+.photo-choice-content h2 {
+  margin: 0 0 10px;
+
+  font-size: 22px;
+}
+
+.photo-choice-content p {
+  margin: 0;
+
+  color: #cbd5e1;
+
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+
+  .photo-choice-screen {
+    padding: 20px;
+  }
+
+  .photo-choice-container {
+    margin-top: 80px;
+  }
+
+  .photo-choice-header h1 {
+    font-size: 28px;
+  }
+
+  .photo-choice-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-choice-image-wrapper {
+    height: 220px;
+  }
+}

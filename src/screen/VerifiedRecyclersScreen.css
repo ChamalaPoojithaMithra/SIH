@@ -1,0 +1,541 @@
+/* =========================
+   MAIN SCREEN
+========================= */
+
+.verified-recyclers-screen {
+  min-height: 100vh;
+
+  background: #071a2b;
+
+  color: white;
+
+  padding: 30px 20px 55px;
+
+  box-sizing: border-box;
+
+  font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.verified-header {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 50px;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.verified-back-button {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  border: none;
+
+  background: #25b95f;
+
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  z-index: 10;
+}
+
+.verified-back-button:hover {
+  background: #1fa553;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   LISTEN BUTTON
+========================= */
+
+.verified-speaker-button {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  border: none;
+
+  background: #25b95f;
+
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  z-index: 10;
+}
+
+.verified-speaker-button:hover {
+  background: #1fa553;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.verified-content {
+  width: min(650px, 100%);
+
+  margin: 35px auto 0;
+
+  text-align: center;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.verified-title-area {
+  text-align: center;
+}
+
+.verified-title-icon {
+  width: 78px;
+  height: 78px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #dff5e7;
+
+  color: #159447;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 38px;
+}
+
+.verified-title-area h1 {
+  margin: 0;
+
+  font-size: 34px;
+
+  line-height: 1.2;
+}
+
+.verified-title-area p {
+  margin: 12px auto 20px;
+
+  color: #c8d4dd;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================
+   GUIDANCE
+========================= */
+
+.verified-guidance {
+  background: #10283b;
+
+  border-radius: 17px;
+
+  padding: 16px 18px;
+
+  margin-bottom: 20px;
+
+  text-align: left;
+
+  border: 1px solid #294153;
+}
+
+.verified-guidance strong {
+  display: block;
+
+  color: white;
+
+  font-size: 14px;
+
+  margin-bottom: 6px;
+}
+
+.verified-guidance span {
+  display: block;
+
+  color: #c5d1d9;
+
+  font-size: 13px;
+
+  line-height: 1.4;
+}
+
+
+/* =========================
+   RECYCLER LIST
+========================= */
+
+.verified-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+/* =========================
+   RECYCLER CARD
+========================= */
+
+.verified-recycler-card {
+  width: 100%;
+
+  background: white;
+
+  color: #173b2c;
+
+  border: 3px solid #35c66d;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+
+  transition: 0.2s ease;
+
+  position: relative;
+}
+
+.verified-recycler-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================
+   RECYCLER TOP
+========================= */
+
+.recycler-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+.recycler-icon {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 50%;
+
+  background: #e5f7ec;
+
+  color: #159447;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 30px;
+
+  flex-shrink: 0;
+}
+
+.recycler-main-info h2 {
+  margin: 0 0 6px;
+
+  font-size: 21px;
+}
+
+
+/* =========================
+   VERIFIED BADGE
+========================= */
+
+.verified-badge {
+  display: inline-block;
+
+  background: #dff5e7;
+
+  color: #12823e;
+
+  padding: 5px 9px;
+
+  border-radius: 15px;
+
+  font-size: 11px;
+
+  font-weight: 800;
+}
+
+
+/* =========================
+   RECYCLER DETAILS
+========================= */
+
+.recycler-details {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+
+  margin-top: 17px;
+}
+
+.recycler-detail {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  background: #f7f9f8;
+
+  padding: 11px;
+
+  border-radius: 12px;
+}
+
+.recycler-detail span {
+  font-size: 20px;
+}
+
+.recycler-detail strong {
+  font-size: 13px;
+
+  color: #173b2c;
+}
+
+
+/* =========================
+   MATERIALS
+========================= */
+
+.recycler-materials {
+  margin-top: 15px;
+
+  padding-top: 14px;
+
+  border-top: 1px solid #dfe7e2;
+}
+
+.materials-title {
+  display: block;
+
+  color: #66756e;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+.material-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 7px;
+}
+
+.material-tag {
+  background: #eaf7ee;
+
+  color: #12823e;
+
+  padding: 6px 9px;
+
+  border-radius: 12px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   SAFETY NOTE
+========================= */
+
+.verified-safe-note {
+  margin: 22px auto 10px;
+
+  color: #c5d1d9;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   DEMO NOTE
+========================= */
+
+.verified-demo-note {
+  color: #71818c;
+
+  font-size: 11px;
+
+  text-align: center;
+
+  margin-top: 8px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .verified-recyclers-screen {
+    padding: 20px 14px 45px;
+  }
+
+
+  /* Header */
+
+  .verified-header {
+    min-height: 45px;
+  }
+
+
+  /* Back button */
+
+  .verified-back-button {
+    top: 0;
+    left: 0;
+
+    padding: 9px 14px;
+
+    font-size: 13px;
+  }
+
+
+  /* Listen button */
+
+  .verified-speaker-button {
+    top: 0;
+    right: 0;
+
+    padding: 9px 14px;
+
+    font-size: 13px;
+
+    border-radius: 11px;
+  }
+
+
+  /* Content */
+
+  .verified-content {
+    margin-top: 25px;
+  }
+
+
+  /* Title */
+
+  .verified-title-icon {
+    width: 68px;
+    height: 68px;
+
+    font-size: 32px;
+  }
+
+  .verified-title-area h1 {
+    font-size: 27px;
+  }
+
+  .verified-title-area p {
+    font-size: 15px;
+  }
+
+
+  /* Guidance */
+
+  .verified-guidance {
+    padding: 14px;
+  }
+
+
+  /* Recycler card */
+
+  .verified-recycler-card {
+    padding: 17px;
+  }
+
+
+  /* Recycler details */
+
+  .recycler-details {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* Recycler title */
+
+  .recycler-main-info h2 {
+    font-size: 19px;
+  }
+
+
+  /* Recycler icon */
+
+  .recycler-icon {
+    width: 52px;
+    height: 52px;
+
+    font-size: 27px;
+  }
+}

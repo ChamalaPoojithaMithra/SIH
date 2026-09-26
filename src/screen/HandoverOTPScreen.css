@@ -1,0 +1,797 @@
+/* ============================= */
+/* MAIN SCREEN */
+/* ============================= */
+
+.handover-otp-screen {
+  min-height: 100vh;
+  background: #071a2b;
+  color: white;
+
+  padding: 30px 20px 50px;
+
+  box-sizing: border-box;
+
+  font-family: Arial, sans-serif;
+}
+
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.handover-otp-header {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 55px;
+}
+
+
+/* ============================= */
+/* BACK BUTTON */
+/* ============================= */
+
+.handover-otp-back {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  border: none;
+
+  background: #25b95f;
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  transition: 0.2s ease;
+}
+
+.handover-otp-back:hover {
+  background: #1fa553;
+
+  transform: translateY(-2px);
+}
+
+
+/* ============================= */
+/* LISTEN AREA */
+/* ============================= */
+
+.handover-otp-speaker-area {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: fit-content;
+
+  z-index: 20;
+}
+
+
+/* ============================= */
+/* LISTEN BUTTON */
+/* ============================= */
+
+.handover-otp-speaker {
+  border: none;
+
+  background: #25b95f;
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  position: relative;
+
+  z-index: 5;
+
+  transition: 0.2s ease;
+}
+
+.handover-otp-speaker:hover {
+  background: #1fa553;
+
+  transform: translateY(-2px);
+}
+
+.handover-otp-speaker.speaking {
+  background: #1fa553;
+}
+
+
+/* ============================= */
+/* FINGER BESIDE LISTEN */
+/* ============================= */
+
+.handover-speaker-finger {
+  position: absolute;
+
+  left: -15px;
+  top: 9px;
+
+  width: 45px;
+  height: 45px;
+
+  z-index: 30;
+
+  pointer-events: none;
+}
+
+.handover-finger {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  font-size: 32px;
+
+  transform: rotate(-45deg);
+
+  z-index: 30;
+}
+
+
+/* ============================= */
+/* LISTEN PULSE RINGS */
+/* ============================= */
+
+.handover-ring {
+  position: absolute;
+
+  border: 2px solid #46d477;
+
+  border-radius: 50%;
+
+  opacity: 0.5;
+
+  animation: handoverPulse 1.8s infinite;
+
+  pointer-events: none;
+}
+
+.handover-ring.ring-one {
+  width: 25px;
+  height: 25px;
+
+  left: 8px;
+  top: 8px;
+}
+
+.handover-ring.ring-two {
+  width: 35px;
+  height: 35px;
+
+  left: 3px;
+  top: 3px;
+
+  animation-delay: 0.3s;
+}
+
+.handover-ring.ring-three {
+  width: 45px;
+  height: 45px;
+
+  left: -2px;
+  top: -2px;
+
+  animation-delay: 0.6s;
+}
+
+@keyframes handoverPulse {
+
+  0% {
+    opacity: 0.55;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 0.15;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+
+
+/* ============================= */
+/* MAIN CONTENT */
+/* ============================= */
+
+.handover-otp-content {
+  width: min(850px, 100%);
+
+  margin: 30px auto 0;
+
+  text-align: center;
+}
+
+
+/* ============================= */
+/* LOCK ICON */
+/* ============================= */
+
+.handover-lock-icon {
+  width: 78px;
+  height: 78px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #dff5e7;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 38px;
+}
+
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.handover-otp-content h1 {
+  margin: 0;
+
+  font-size: 34px;
+
+  line-height: 1.2;
+}
+
+
+/* ============================= */
+/* SUBTITLE */
+/* ============================= */
+
+.handover-otp-subtitle {
+  margin: 12px auto 25px;
+
+  max-width: 650px;
+
+  color: #c9d5df;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+}
+
+
+/* ============================= */
+/* RECYCLER CARD */
+/* ============================= */
+
+.handover-otp-recycler-card {
+  background: white;
+
+  color: #173b2c;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  text-align: left;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+
+  margin-bottom: 25px;
+}
+
+
+/* ============================= */
+/* RECYCLER ICON */
+/* ============================= */
+
+.handover-recycler-icon {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: #e7f6ed;
+
+  color: #159447;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 27px;
+
+  flex-shrink: 0;
+}
+
+
+/* ============================= */
+/* RECYCLER DETAILS */
+/* ============================= */
+
+.handover-recycler-details span {
+  display: block;
+
+  color: #66756e;
+
+  font-size: 12px;
+
+  margin-bottom: 4px;
+}
+
+.handover-recycler-details strong {
+  display: block;
+
+  font-size: 20px;
+
+  margin-bottom: 4px;
+}
+
+.handover-recycler-details small {
+  display: block;
+
+  color: #159447;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  margin-bottom: 4px;
+}
+
+.handover-recycler-details em {
+  display: block;
+
+  color: #66756e;
+
+  font-size: 11px;
+
+  font-style: normal;
+}
+
+
+/* ============================= */
+/* OTP BOX */
+/* ============================= */
+
+.handover-otp-box {
+  background: white;
+
+  color: #173b2c;
+
+  border-radius: 20px;
+
+  padding: 25px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+
+  margin-bottom: 22px;
+}
+
+.handover-otp-box h2 {
+  margin: 0 0 8px;
+
+  font-size: 21px;
+}
+
+.handover-otp-box p {
+  margin: 0 0 20px;
+
+  color: #66756e;
+
+  font-size: 13px;
+}
+
+
+/* ============================= */
+/* OTP INPUTS */
+/* ============================= */
+
+.otp-inputs {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin: 10px auto 18px;
+}
+
+.otp-inputs input {
+  width: 52px;
+  height: 58px;
+
+  border: 2px solid #d8e3dc;
+
+  border-radius: 12px;
+
+  background: #f8faf9;
+
+  color: #173b2c;
+
+  text-align: center;
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.otp-inputs input:focus {
+  border-color: #25b95f;
+
+  background: #e7f6ed;
+
+  box-shadow: 0 0 0 3px rgba(37, 185, 95, 0.12);
+}
+
+.otp-inputs input.otp-error {
+  border-color: #e05252;
+
+  background: #fff4f4;
+}
+
+
+/* ============================= */
+/* ERROR */
+/* ============================= */
+
+.handover-otp-error {
+  color: #d63d3d;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+
+/* ============================= */
+/* DEMO OTP */
+/* ============================= */
+
+.handover-demo-otp {
+  display: inline-block;
+
+  background: #e7f6ed;
+
+  color: #159447;
+
+  padding: 9px 15px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* ============================= */
+/* SAFETY BOX */
+/* ============================= */
+
+.handover-safe-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  background: #102b3e;
+
+  border: 1px solid #21465c;
+
+  border-radius: 16px;
+
+  padding: 17px;
+
+  text-align: left;
+
+  margin-bottom: 30px;
+}
+
+
+/* ============================= */
+/* SAFETY ICON */
+/* ============================= */
+
+.handover-safe-icon {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: #173d52;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 23px;
+
+  flex-shrink: 0;
+}
+
+
+/* ============================= */
+/* SAFETY TEXT */
+/* ============================= */
+
+.handover-safe-box h3 {
+  margin: 0 0 5px;
+
+  font-size: 16px;
+}
+
+.handover-safe-box p {
+  margin: 0;
+
+  color: #c6d3dc;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* ============================= */
+/* VERIFY BUTTON AREA */
+/* ============================= */
+
+.verify-otp-area {
+  position: relative;
+
+  width: min(430px, 100%);
+
+  margin: 35px auto 0;
+}
+
+
+/* ============================= */
+/* VERIFY BUTTON */
+/* ============================= */
+
+.verify-otp-button {
+  width: 100%;
+
+  border: none;
+
+  background: #25b95f;
+
+  color: white;
+
+  padding: 18px 25px;
+
+  border-radius: 15px;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(37, 185, 95, 0.25);
+
+  position: relative;
+
+  z-index: 3;
+
+  transition: 0.2s ease;
+}
+
+.verify-otp-button:hover {
+  background: #1fa553;
+
+  transform: translateY(-2px);
+}
+
+.verify-otp-button span {
+  margin-left: 12px;
+
+  font-size: 22px;
+}
+
+
+/* ============================= */
+/* VERIFY FINGER */
+/* ============================= */
+
+.verify-otp-finger {
+  position: absolute;
+
+  right: -15px;
+  top: 7px;
+
+  font-size: 42px;
+
+  transform: rotate(-135deg);
+
+  z-index: 20;
+
+  pointer-events: none;
+
+  animation: verifyOtpFinger 1.5s infinite;
+}
+
+@keyframes verifyOtpFinger {
+
+  0% {
+    transform: rotate(-135deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-135deg) translateY(5px);
+  }
+
+  100% {
+    transform: rotate(-135deg) translateY(0);
+  }
+}
+
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 750px) {
+
+  .handover-otp-screen {
+    padding: 20px 15px 40px;
+  }
+
+  .handover-otp-header {
+    min-height: 50px;
+  }
+
+  .handover-otp-back {
+    padding: 9px 14px;
+
+    font-size: 13px;
+  }
+
+  .handover-otp-speaker {
+    padding: 9px 14px;
+
+    font-size: 13px;
+  }
+
+  .handover-speaker-finger {
+    left: -10px;
+
+    top: 8px;
+
+    transform: scale(0.85);
+  }
+
+  .handover-otp-content {
+    margin-top: 25px;
+  }
+
+  .handover-otp-content h1 {
+    font-size: 28px;
+  }
+
+  .handover-otp-subtitle {
+    font-size: 15px;
+  }
+
+  .otp-inputs {
+    gap: 7px;
+  }
+
+  .otp-inputs input {
+    width: 45px;
+    height: 52px;
+
+    font-size: 21px;
+  }
+
+  .verify-otp-finger {
+    right: -8px;
+
+    top: 5px;
+
+    font-size: 36px;
+  }
+}
+
+
+/* ============================= */
+/* SMALL MOBILE */
+/* ============================= */
+
+@media (max-width: 450px) {
+
+  .handover-otp-screen {
+    padding: 20px 14px 40px;
+  }
+
+  .handover-otp-content h1 {
+    font-size: 24px;
+  }
+
+  .handover-lock-icon {
+    width: 65px;
+    height: 65px;
+
+    font-size: 32px;
+  }
+
+  .handover-otp-back {
+    padding: 9px 12px;
+
+    font-size: 12px;
+  }
+
+  .handover-otp-speaker {
+    padding: 9px 12px;
+
+    font-size: 12px;
+  }
+
+  .handover-speaker-finger {
+    left: -6px;
+
+    top: 8px;
+
+    transform: scale(0.72);
+  }
+
+  .otp-inputs {
+    gap: 5px;
+  }
+
+  .otp-inputs input {
+    width: 40px;
+    height: 48px;
+
+    font-size: 19px;
+  }
+
+  .verify-otp-finger {
+    right: -5px;
+
+    top: 4px;
+
+    font-size: 32px;
+  }
+
+  .verify-otp-button {
+    font-size: 15px;
+
+    padding: 16px;
+  }
+}

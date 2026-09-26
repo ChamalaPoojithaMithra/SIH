@@ -1,0 +1,477 @@
+/* =========================================
+   COLLECTOR LOGIN SCREEN
+========================================= */
+
+.collector-login-screen {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(20, 70, 130, 0.45),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(0, 150, 90, 0.22),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #06142f 0%,
+      #020711 48%,
+      #000000 100%
+    );
+
+  color: white;
+  padding: 40px 30px 60px;
+
+  position: relative;
+}
+
+
+/* =========================================
+   LOGIN CONTAINER
+========================================= */
+
+.collector-login-container {
+  width: 100%;
+  max-width: 520px;
+
+  margin: 100px auto 0;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.collector-login-icon {
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 22px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 45px;
+
+  background: rgba(34, 197, 94, 0.15);
+
+  border: 1px solid rgba(80, 180, 255, 0.35);
+
+  box-shadow:
+    0 0 30px rgba(40, 150, 255, 0.15);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.collector-login-container h1 {
+  margin: 0;
+
+  font-size: 40px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.collector-login-subtitle {
+  margin-top: 12px;
+
+  font-size: 17px;
+
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.collector-login-form {
+  margin-top: 45px;
+
+  text-align: left;
+}
+
+.collector-login-form label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-size: 17px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   PHONE INPUT
+========================================= */
+
+.collector-login-form input {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 17px 18px;
+
+  border-radius: 14px;
+
+  border: 1px solid rgba(80, 180, 255, 0.4);
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  font-size: 17px;
+}
+
+.collector-login-form input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.collector-login-form input:focus {
+  border-color: #50b4ff;
+
+  box-shadow:
+    0 0 18px rgba(80, 180, 255, 0.18);
+}
+
+
+/* =========================================
+   NOTE
+========================================= */
+
+.collector-login-note {
+  margin-top: 14px;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  text-align: center;
+}
+
+
+/* =========================================
+   CONTINUE
+========================================= */
+
+.collector-login-continue {
+  width: 100%;
+
+  margin-top: 28px;
+
+  padding: 17px 24px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1684d8,
+      #0b5fa8
+    );
+
+  color: white;
+
+  font-size: 17px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.collector-login-continue span {
+  font-size: 22px;
+}
+
+.collector-login-continue:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(40, 150, 255, 0.25);
+}
+
+.collector-login-continue:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   SPEAKER
+========================================= */
+
+.collector-login-speaker-wrapper {
+  position: fixed;
+
+  top: 20px;
+  right: 35px;
+
+  width: 110px;
+  height: 120px;
+
+  z-index: 9999;
+}
+
+
+/* speaker button */
+
+.collector-login-speaker-button {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 110px;
+  height: 60px;
+
+  border: none;
+  border-radius: 35px;
+
+  background: #22c55e;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 10002;
+
+  box-shadow:
+    0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.collector-login-speaker-button img {
+  width: 30px;
+  height: 30px;
+
+  object-fit: contain;
+
+  filter: brightness(0) invert(1);
+}
+
+.collector-login-speaker-button:hover {
+  background: #16a34a;
+
+  transform: scale(1.05);
+}
+
+.collector-login-speaker-button.speaking {
+  animation:
+    collectorLoginSpeakerPulse
+    1s ease-in-out infinite;
+}
+
+@keyframes collectorLoginSpeakerPulse {
+
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================================
+   FINGER
+========================================= */
+
+.collector-login-finger-effect {
+  position: absolute;
+
+  left: 55px;
+  top: 75px;
+
+  width: 60px;
+  height: 60px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+
+  z-index: 10003;
+}
+
+.collector-login-finger {
+  position: relative;
+
+  font-size: 32px;
+
+  line-height: 1;
+
+  z-index: 10005;
+
+  animation:
+    collectorLoginFingerMove
+    1.5s ease-in-out infinite;
+}
+
+@keyframes collectorLoginFingerMove {
+
+  0% {
+    transform: translateY(3px);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(3px);
+  }
+
+}
+
+
+/* =========================================
+   RINGS
+========================================= */
+
+.collector-login-ring {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 38px;
+  height: 38px;
+
+  border: 2px solid rgba(80, 180, 255, 0.8);
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.5);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 10004;
+}
+
+.collector-login-ring.ring-1 {
+  animation:
+    collectorLoginRing
+    2s linear infinite;
+}
+
+.collector-login-ring.ring-2 {
+  animation:
+    collectorLoginRing
+    2s linear infinite 0.65s;
+}
+
+.collector-login-ring.ring-3 {
+  animation:
+    collectorLoginRing
+    2s linear infinite 1.3s;
+}
+
+@keyframes collectorLoginRing {
+
+  0% {
+    transform:
+      translate(-50%, -50%)
+      scale(0.5);
+
+    opacity: 0.9;
+  }
+
+  100% {
+    transform:
+      translate(-50%, -50%)
+      scale(2.4);
+
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .collector-login-screen {
+    padding: 30px 18px 45px;
+  }
+
+  .collector-login-container {
+    margin-top: 85px;
+  }
+
+  .collector-login-container h1 {
+    font-size: 30px;
+  }
+
+  .collector-login-subtitle {
+    font-size: 14px;
+  }
+
+  .collector-login-speaker-wrapper {
+    top: 18px;
+    right: 14px;
+
+    width: 90px;
+    height: 100px;
+  }
+
+  .collector-login-speaker-button {
+    width: 90px;
+    height: 50px;
+  }
+
+  .collector-login-finger-effect {
+    left: 45px;
+    top: 65px;
+  }
+
+}

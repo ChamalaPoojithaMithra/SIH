@@ -1,0 +1,692 @@
+/* ============================= */
+/* MAIN SCREEN */
+/* ============================= */
+
+.recycler-arrival-screen {
+  min-height: 100vh;
+  background: #071a2b;
+  color: white;
+  padding: 30px 20px 50px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.recycler-arrival-header {
+  position: relative;
+  width: 100%;
+  min-height: 55px;
+}
+
+
+/* ============================= */
+/* BACK BUTTON */
+/* ============================= */
+
+.recycler-arrival-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  border: none;
+  background: #25b95f;
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  transition: 0.2s ease;
+}
+
+.recycler-arrival-back:hover {
+  background: #1fa553;
+  transform: translateY(-2px);
+}
+
+
+/* ============================= */
+/* LISTEN AREA - TOP RIGHT */
+/* ============================= */
+
+.recycler-arrival-speaker-area {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: fit-content;
+
+  z-index: 20;
+}
+
+
+/* ============================= */
+/* LISTEN BUTTON */
+/* ============================= */
+
+.recycler-arrival-speaker {
+  border: none;
+
+  background: #25b95f;
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  position: relative;
+
+  z-index: 5;
+
+  transition: 0.2s ease;
+}
+
+.recycler-arrival-speaker:hover {
+  background: #1fa553;
+  transform: translateY(-2px);
+}
+
+.recycler-arrival-speaker.speaking {
+  background: #1fa553;
+}
+
+
+/* ============================= */
+/* FINGER POINTING TO LISTEN */
+/* ============================= */
+
+.arrival-finger-effect {
+  position: absolute;
+
+  left: -15px;
+  top: 9px;
+
+  width: 45px;
+  height: 45px;
+
+  z-index: 30;
+
+  pointer-events: none;
+}
+
+.arrival-finger {
+  position: absolute;
+
+  left: 0;
+  top: 0;
+
+  font-size: 32px;
+
+  transform: rotate(-45deg);
+
+  z-index: 30;
+}
+
+
+/* ============================= */
+/* PULSE RINGS */
+/* ============================= */
+
+.arrival-ring {
+  position: absolute;
+
+  border: 2px solid #46d477;
+
+  border-radius: 50%;
+
+  opacity: 0.5;
+
+  animation: arrivalPulse 1.8s infinite;
+
+  pointer-events: none;
+}
+
+.ring-one {
+  width: 25px;
+  height: 25px;
+
+  left: 8px;
+  top: 8px;
+}
+
+.ring-two {
+  width: 35px;
+  height: 35px;
+
+  left: 3px;
+  top: 3px;
+
+  animation-delay: 0.3s;
+}
+
+.ring-three {
+  width: 45px;
+  height: 45px;
+
+  left: -2px;
+  top: -2px;
+
+  animation-delay: 0.6s;
+}
+
+@keyframes arrivalPulse {
+
+  0% {
+    opacity: 0.55;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 0.15;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.15);
+  }
+}
+
+
+/* ============================= */
+/* MAIN CONTENT */
+/* ============================= */
+
+.recycler-arrival-content {
+  width: min(850px, 100%);
+
+  margin: 30px auto 0;
+
+  text-align: center;
+}
+
+
+/* ============================= */
+/* TOP ICON */
+/* ============================= */
+
+.recycler-arrival-icon {
+  width: 76px;
+  height: 76px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #dff5e7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 38px;
+}
+
+
+/* ============================= */
+/* TITLE */
+/* ============================= */
+
+.recycler-arrival-content h1 {
+  margin: 0;
+
+  font-size: 34px;
+
+  line-height: 1.2;
+}
+
+
+/* ============================= */
+/* SUBTITLE */
+/* ============================= */
+
+.recycler-arrival-subtitle {
+  margin: 12px auto 25px;
+
+  max-width: 650px;
+
+  color: #c9d5df;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+}
+
+
+/* ============================= */
+/* RECYCLER CARD */
+/* ============================= */
+
+.recycler-arrival-card {
+  background: white;
+
+  color: #173b2c;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+
+  margin-bottom: 25px;
+
+  text-align: left;
+}
+
+
+/* ============================= */
+/* RECYCLER HEADER */
+/* ============================= */
+
+.arrival-recycler-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+}
+
+
+/* ============================= */
+/* AVATAR */
+/* ============================= */
+
+.arrival-recycler-avatar {
+  width: 55px;
+  height: 55px;
+
+  border-radius: 50%;
+
+  background: #e7f6ed;
+
+  color: #159447;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 27px;
+
+  flex-shrink: 0;
+}
+
+
+/* ============================= */
+/* RECYCLER NAME */
+/* ============================= */
+
+.arrival-recycler-header h2 {
+  margin: 0 0 5px;
+
+  font-size: 20px;
+}
+
+.arrival-recycler-header p {
+  margin: 0;
+
+  color: #159447;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+/* ============================= */
+/* DIVIDER */
+/* ============================= */
+
+.arrival-divider {
+  height: 1px;
+
+  background: #e3e9e6;
+
+  margin: 18px 0;
+}
+
+
+/* ============================= */
+/* DETAILS */
+/* ============================= */
+
+.arrival-details {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+}
+
+
+/* ============================= */
+/* DETAIL BOX */
+/* ============================= */
+
+.arrival-detail-box {
+  background: #f5f8f6;
+
+  border-radius: 12px;
+
+  padding: 14px;
+}
+
+.arrival-detail-box span {
+  display: block;
+
+  color: #66756e;
+
+  font-size: 11px;
+
+  margin-bottom: 6px;
+}
+
+.arrival-detail-box strong {
+  display: block;
+
+  color: #173b2c;
+
+  font-size: 15px;
+}
+
+
+/* ============================= */
+/* SAFETY BOX */
+/* ============================= */
+
+.arrival-safety-box {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  background: #102b3e;
+
+  border: 1px solid #21465c;
+
+  border-radius: 16px;
+
+  padding: 17px;
+
+  text-align: left;
+
+  margin-bottom: 30px;
+}
+
+
+/* ============================= */
+/* SAFETY ICON */
+/* ============================= */
+
+.arrival-safety-icon {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: #173d52;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 23px;
+
+  flex-shrink: 0;
+}
+
+
+/* ============================= */
+/* SAFETY TEXT */
+/* ============================= */
+
+.arrival-safety-box h3 {
+  margin: 0 0 5px;
+
+  font-size: 16px;
+}
+
+.arrival-safety-box p {
+  margin: 0;
+
+  color: #c6d3dc;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+/* ============================= */
+/* VERIFY BUTTON AREA */
+/* ============================= */
+
+.verify-recycler-area {
+  position: relative;
+
+  width: min(430px, 100%);
+
+  margin: 35px auto 0;
+}
+
+
+/* ============================= */
+/* VERIFY BUTTON */
+/* ============================= */
+
+.verify-recycler-button {
+  width: 100%;
+
+  border: none;
+
+  background: #25b95f;
+
+  color: white;
+
+  padding: 18px 25px;
+
+  border-radius: 15px;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(37, 185, 95, 0.25);
+
+  position: relative;
+
+  z-index: 3;
+
+  transition: 0.2s ease;
+}
+
+.verify-recycler-button:hover {
+  background: #1fa553;
+
+  transform: translateY(-2px);
+}
+
+.verify-recycler-button span {
+  margin-left: 12px;
+
+  font-size: 22px;
+}
+
+
+/* ============================= */
+/* FINGER POINTING TO VERIFY */
+/* ============================= */
+
+.verify-recycler-finger {
+  position: absolute;
+
+  right: -15px;
+  top: 7px;
+
+  font-size: 42px;
+
+  transform: rotate(-135deg);
+
+  z-index: 20;
+
+  pointer-events: none;
+
+  animation: verifyFingerTap 1.5s infinite;
+}
+
+@keyframes verifyFingerTap {
+
+  0% {
+    transform: rotate(-135deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-135deg) translateY(5px);
+  }
+
+  100% {
+    transform: rotate(-135deg) translateY(0);
+  }
+}
+
+
+/* ============================= */
+/* TABLET / MOBILE */
+/* ============================= */
+
+@media (max-width: 750px) {
+
+  .recycler-arrival-screen {
+    padding: 20px 15px 40px;
+  }
+
+  .recycler-arrival-header {
+    min-height: 50px;
+  }
+
+  .recycler-arrival-back {
+    padding: 9px 14px;
+
+    font-size: 13px;
+  }
+
+  .recycler-arrival-speaker {
+    padding: 9px 14px;
+
+    font-size: 13px;
+  }
+
+  .arrival-finger-effect {
+    left: -10px;
+
+    top: 8px;
+
+    transform: scale(0.85);
+  }
+
+  .recycler-arrival-content {
+    margin-top: 25px;
+  }
+
+  .recycler-arrival-content h1 {
+    font-size: 28px;
+  }
+
+  .recycler-arrival-subtitle {
+    font-size: 15px;
+  }
+
+  .arrival-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .verify-recycler-finger {
+    right: -8px;
+
+    top: 5px;
+
+    font-size: 36px;
+  }
+}
+
+
+/* ============================= */
+/* SMALL MOBILE */
+/* ============================= */
+
+@media (max-width: 450px) {
+
+  .recycler-arrival-screen {
+    padding: 20px 14px 40px;
+  }
+
+  .recycler-arrival-content h1 {
+    font-size: 24px;
+  }
+
+  .recycler-arrival-icon {
+    width: 65px;
+    height: 65px;
+
+    font-size: 32px;
+  }
+
+  .arrival-details {
+    grid-template-columns: 1fr;
+  }
+
+  .recycler-arrival-speaker {
+    padding: 9px 12px;
+
+    font-size: 12px;
+  }
+
+  .recycler-arrival-back {
+    padding: 9px 12px;
+
+    font-size: 12px;
+  }
+
+  .arrival-finger-effect {
+    left: -6px;
+
+    top: 8px;
+
+    transform: scale(0.72);
+  }
+
+  .verify-recycler-finger {
+    right: -5px;
+
+    top: 4px;
+
+    font-size: 32px;
+  }
+
+  .verify-recycler-button {
+    font-size: 15px;
+
+    padding: 16px;
+  }
+}

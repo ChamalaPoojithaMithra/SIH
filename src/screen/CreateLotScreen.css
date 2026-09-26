@@ -1,0 +1,901 @@
+.create-lot-screen {
+  min-height: 100vh;
+  background: #071b33;
+  color: white;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.create-lot-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: calc(100vh - 60px);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.create-lot-back {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  border: none;
+  background:  #22c55e;
+  color: white;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  z-index: 50;
+
+  transition: transform 0.2s ease;
+}
+
+.create-lot-back:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SPEAKER AREA
+========================================================= */
+
+.create-lot-speaker-area {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 160px;
+  height: 145px;
+
+  z-index: 40;
+}
+
+
+/* =========================================================
+   SPEAKER BUTTON
+========================================================= */
+
+.create-lot-speaker {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  height: 52px;
+
+  padding: 0 22px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #22c55e;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(34, 197, 94, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  z-index: 10;
+}
+
+.create-lot-speaker:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(34, 197, 94, 0.35);
+}
+
+.create-lot-speaker.speaking {
+  transform: scale(1.04);
+
+  box-shadow:
+    0 10px 28px rgba(34, 197, 94, 0.45);
+}
+
+
+/* =========================================================
+   SPEAKER FINGER GUIDE
+========================================================= */
+
+.speaker-finger-guide {
+  position: absolute;
+
+  top: 52px;
+  right: 15px;
+
+  width: 80px;
+  height: 90px;
+
+  pointer-events: none;
+
+  z-index: 30;
+}
+
+
+/* =========================================================
+   SPEAKER FINGER
+========================================================= */
+
+.speaker-finger {
+  position: absolute;
+
+  left: 40px;
+  top: 0;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 38px;
+
+  line-height: 1;
+
+  transform: translateX(-50%);
+
+  z-index: 5;
+
+  animation:
+    speakerFingerBounce
+    1.4s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================================
+   SPEAKER CIRCLES
+========================================================= */
+
+.speaker-ring {
+  position: absolute;
+
+  left: 40px;
+  top: 30px;
+
+  width: 30px;
+  height: 30px;
+
+  box-sizing: border-box;
+
+  border: 3px solid #22c55e;
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.5);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  animation:
+    speakerRingPulse
+    2.4s
+    ease-out
+    infinite;
+}
+
+.speaker-ring-1 {
+  animation-delay: 0s;
+}
+
+.speaker-ring-2 {
+  animation-delay: 0.7s;
+}
+
+.speaker-ring-3 {
+  animation-delay: 1.4s;
+}
+
+
+/* =========================================================
+   SPEAKER FINGER ANIMATION
+========================================================= */
+
+@keyframes speakerFingerBounce {
+
+  0% {
+    transform:
+      translateX(-50%)
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateX(-50%)
+      translateY(-5px);
+  }
+
+  100% {
+    transform:
+      translateX(-50%)
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   SPEAKER CIRCLE ANIMATION
+========================================================= */
+
+@keyframes speakerRingPulse {
+
+  0% {
+    transform:
+      translate(-50%, -50%)
+      scale(0.5);
+
+    opacity: 0.9;
+  }
+
+  70% {
+    transform:
+      translate(-50%, -50%)
+      scale(2.5);
+
+    opacity: 0.25;
+  }
+
+  100% {
+    transform:
+      translate(-50%, -50%)
+      scale(3.5);
+
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.create-lot-header {
+  text-align: center;
+
+  padding-top: 95px;
+
+  margin-bottom: 30px;
+}
+
+.create-lot-icon {
+  font-size: 58px;
+
+  margin-bottom: 12px;
+}
+
+.create-lot-header h1 {
+  margin: 0;
+
+  font-size: 38px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.5px;
+}
+
+.create-lot-header p {
+  margin-top: 12px;
+
+  color: #cbd5e1;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   DETAILS CARD
+========================================================= */
+
+.create-lot-card {
+  width: 100%;
+
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  background: white;
+
+  border-radius: 22px;
+
+  padding: 10px 25px;
+
+  box-sizing: border-box;
+
+  color: #173b2c;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.lot-detail {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 22px 10px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lot-detail:last-child {
+  border-bottom: none;
+}
+
+.lot-detail-icon {
+  width: 58px;
+  height: 58px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #ecfdf5;
+
+  border-radius: 16px;
+
+  font-size: 28px;
+
+  flex-shrink: 0;
+}
+
+.lot-detail-content {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.lot-label {
+  color: #64748b;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.lot-value {
+  font-size: 22px;
+
+  color: #173b2c;
+}
+
+.photo-success {
+  color: #16a34a;
+}
+
+
+/* =========================================================
+   CREATE LOT ACTION
+========================================================= */
+
+.create-lot-action {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 650px;
+
+  margin: 35px auto 0;
+
+  padding-bottom: 120px;
+}
+
+
+/* =========================================================
+   CREATE LOT BUTTON
+========================================================= */
+
+.create-lot-button {
+  width: 100%;
+
+  border: none;
+
+  background: #22c55e;
+
+  color: white;
+
+  padding: 20px 25px;
+
+  border-radius: 18px;
+
+  font-size: 21px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  box-shadow:
+    0 12px 25px rgba(34, 197, 94, 0.3);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.create-lot-button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 15px 30px rgba(34, 197, 94, 0.4);
+}
+
+.create-lot-button:active {
+  transform: scale(0.98);
+}
+
+.create-lot-arrow {
+  font-size: 30px;
+}
+
+
+/* =========================================================
+   CREATE LOT FINGER GUIDE
+   DIRECTLY BELOW BUTTON
+========================================================= */
+
+.create-button-finger-guide {
+  position: absolute;
+
+  /*
+    IMPORTANT:
+    Do NOT use top: 100%.
+    Fixed position keeps the guide close to the button.
+  */
+
+  top: 70px;
+  left: 50%;
+
+  width: 90px;
+  height: 95px;
+
+  transform: translateX(-50%);
+
+  pointer-events: none;
+
+  z-index: 30;
+}
+
+
+/* =========================================================
+   CREATE LOT FINGER
+========================================================= */
+
+.create-button-finger {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 42px;
+
+  line-height: 1;
+
+  transform: translateX(-50%);
+
+  z-index: 5;
+
+  animation:
+    createFingerBounce
+    1.4s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================================
+   CREATE LOT CONCENTRIC CIRCLES
+========================================================= */
+
+.create-button-ring {
+  position: absolute;
+
+  left: 50%;
+  top: 38px;
+
+  width: 28px;
+  height: 28px;
+
+  box-sizing: border-box;
+
+  border: 3px solid #22c55e;
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.5);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  animation:
+    createRingPulse
+    2.4s
+    ease-out
+    infinite;
+}
+
+
+/* =========================================================
+   RING TIMING
+========================================================= */
+
+.create-ring-1 {
+  animation-delay: 0s;
+}
+
+.create-ring-2 {
+  animation-delay: 0.7s;
+}
+
+.create-ring-3 {
+  animation-delay: 1.4s;
+}
+
+
+/* =========================================================
+   CREATE FINGER ANIMATION
+========================================================= */
+
+@keyframes createFingerBounce {
+
+  0% {
+    transform:
+      translateX(-50%)
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateX(-50%)
+      translateY(5px);
+  }
+
+  100% {
+    transform:
+      translateX(-50%)
+      translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   CREATE CIRCLE ANIMATION
+========================================================= */
+
+@keyframes createRingPulse {
+
+  0% {
+    transform:
+      translate(-50%, -50%)
+      scale(0.5);
+
+    opacity: 0.9;
+  }
+
+  70% {
+    transform:
+      translate(-50%, -50%)
+      scale(2.5);
+
+    opacity: 0.25;
+  }
+
+  100% {
+    transform:
+      translate(-50%, -50%)
+      scale(3.5);
+
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================================
+   SUCCESS BOX
+========================================================= */
+
+.created-lot-box {
+  width: 100%;
+
+  max-width: 650px;
+
+  margin: 30px auto 0;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  background: #ecfdf5;
+
+  color: #166534;
+
+  border: 2px solid #22c55e;
+
+  border-radius: 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.created-lot-check {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 25px;
+
+  font-weight: 800;
+
+  flex-shrink: 0;
+}
+
+.created-lot-box p {
+  margin: 0 0 5px;
+
+  font-size: 15px;
+}
+
+.created-lot-box strong {
+  font-size: 20px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .create-lot-screen {
+    padding: 20px;
+  }
+
+  .create-lot-container {
+    min-height: calc(100vh - 40px);
+  }
+
+
+  /* BACK BUTTON */
+
+  .create-lot-back {
+    padding: 10px 15px;
+
+    font-size: 14px;
+  }
+
+
+  /* SPEAKER */
+
+  .create-lot-speaker-area {
+    width: 135px;
+
+    height: 135px;
+  }
+
+  .create-lot-speaker {
+    height: 48px;
+
+    padding: 0 16px;
+
+    font-size: 14px;
+  }
+
+
+  /* SPEAKER FINGER */
+
+  .speaker-finger-guide {
+    top: 48px;
+
+    right: 8px;
+
+    width: 70px;
+
+    height: 80px;
+  }
+
+  .speaker-finger {
+    left: 35px;
+
+    top: 0;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 34px;
+  }
+
+
+  /* SPEAKER RINGS */
+
+  .speaker-ring {
+    left: 35px;
+
+    top: 28px;
+
+    width: 25px;
+    height: 25px;
+  }
+
+
+  /* HEADER */
+
+  .create-lot-header {
+    padding-top: 105px;
+  }
+
+  .create-lot-header h1 {
+    font-size: 29px;
+  }
+
+  .create-lot-header p {
+    font-size: 15px;
+  }
+
+
+  /* DETAILS CARD */
+
+  .create-lot-card {
+    padding: 5px 15px;
+  }
+
+  .lot-detail {
+    gap: 14px;
+
+    padding: 18px 5px;
+  }
+
+  .lot-detail-icon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 23px;
+  }
+
+  .lot-value {
+    font-size: 19px;
+  }
+
+
+  /* CREATE LOT ACTION */
+
+  .create-lot-action {
+    margin-top: 35px;
+
+    padding-bottom: 100px;
+  }
+
+
+  /* CREATE LOT BUTTON */
+
+  .create-lot-button {
+    font-size: 18px;
+
+    padding: 18px;
+  }
+
+
+  /* =====================================================
+     CREATE LOT GUIDE - MOBILE
+
+     The guide is FIXED below the button.
+     ===================================================== */
+
+  .create-button-finger-guide {
+    top: 65px;
+
+    left: 50%;
+
+    width: 75px;
+
+    height: 80px;
+
+    transform: translateX(-50%);
+  }
+
+
+  /* CREATE LOT FINGER */
+
+  .create-button-finger {
+    left: 50%;
+
+    top: 0;
+
+    width: 40px;
+    height: 40px;
+
+    font-size: 36px;
+
+    transform: translateX(-50%);
+  }
+
+
+  /* CREATE LOT CIRCLES */
+
+  .create-button-ring {
+    left: 50%;
+
+    top: 34px;
+
+    width: 25px;
+    height: 25px;
+  }
+
+
+  /* SUCCESS */
+
+  .created-lot-box {
+    padding: 16px;
+  }
+
+  .created-lot-box strong {
+    font-size: 17px;
+  }
+
+}

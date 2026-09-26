@@ -1,0 +1,255 @@
+.cluster-details-screen {
+  min-height: 100vh;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f1f5f9;
+}
+
+.cluster-details-card {
+  width: 100%;
+  max-width: 850px;
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+.cluster-details-back {
+  border: none;
+  background: transparent;
+  color: #334155;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.cluster-details-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.cluster-details-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: #dcfce7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+}
+
+.cluster-details-header h1 {
+  margin: 0 0 5px;
+  font-size: 27px;
+  color: #0f172a;
+}
+
+.cluster-details-header h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+  color: #166534;
+}
+
+.cluster-details-header p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+.cluster-summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.cluster-summary-box {
+  padding: 20px;
+  border-radius: 17px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.summary-icon {
+  font-size: 26px;
+}
+
+.cluster-summary-box small {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cluster-summary-box strong {
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.cluster-ready-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.cluster-ready-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.cluster-ready-box small {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cluster-ready-box strong {
+  display: block;
+  color: #166534;
+  font-size: 17px;
+  margin-top: 3px;
+}
+
+.cluster-route-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  margin-bottom: 22px;
+  border-radius: 16px;
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+}
+
+.cluster-route-icon {
+  font-size: 32px;
+}
+
+.cluster-route-box h3 {
+  margin: 0 0 5px;
+  color: #1e3a8a;
+  font-size: 17px;
+}
+
+.cluster-route-box p {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.cluster-collector-list {
+  margin-bottom: 20px;
+}
+
+.cluster-collector-list h3 {
+  margin: 0 0 12px;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.cluster-collector-row {
+  display: grid;
+  grid-template-columns: 35px 1fr auto;
+  align-items: center;
+  padding: 14px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.cluster-collector-row span:first-child {
+  font-size: 21px;
+}
+
+.cluster-collector-row span:nth-child(2) {
+  color: #334155;
+  font-weight: 700;
+}
+
+.cluster-collector-row strong {
+  color: #166534;
+}
+
+.cluster-details-guidance {
+  text-align: center;
+  font-size: 28px;
+  margin: 10px 0;
+  animation: clusterFingerBounce 1.2s ease-in-out infinite;
+}
+
+.cluster-feasibility-button {
+  width: 100%;
+  padding: 17px 20px;
+  border: none;
+  border-radius: 14px;
+  background: #16a34a;
+  color: white;
+  font-size: 17px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.cluster-feasibility-button:hover {
+  background: #15803d;
+}
+
+.cluster-feasibility-button span {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+@keyframes clusterFingerBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+@media (max-width: 700px) {
+
+  .cluster-details-screen {
+    padding: 16px;
+  }
+
+  .cluster-details-card {
+    padding: 20px;
+  }
+
+  .cluster-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .cluster-details-header h1 {
+    font-size: 22px;
+  }
+
+}

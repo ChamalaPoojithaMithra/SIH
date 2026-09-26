@@ -1,0 +1,751 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================
+   FULL SCREEN
+========================================= */
+
+.make-offer-screen {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    #071b14,
+    #0b3023,
+    #063c29
+  );
+
+  padding: 18px 24px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.make-offer-card {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding: 0;
+
+  background: transparent;
+
+  border-radius: 0;
+
+  box-shadow: none;
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.make-offer-back {
+  align-self: flex-start;
+
+  border: none;
+
+  background: #25b95f;
+
+  color: white;
+
+  padding: 9px 17px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  margin-bottom: 12px;
+
+  transition: 0.2s ease;
+
+  flex-shrink: 0;
+}
+
+.make-offer-back:hover {
+  background: #1fa653;
+
+  transform: translateY(-2px);
+}
+
+.make-offer-back:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.make-offer-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 12px;
+
+  flex-shrink: 0;
+}
+
+.make-offer-title-icon {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 14px;
+
+  background: #e8faee;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  flex-shrink: 0;
+}
+
+.make-offer-header h1 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 26px;
+
+  line-height: 1.1;
+}
+
+.make-offer-header p {
+  margin: 4px 0 0;
+
+  color: #c9ddd3;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   LOT INFORMATION
+========================================= */
+
+.make-offer-lot {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 14px 16px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid
+    rgba(226, 238, 230, 0.20);
+
+  margin-bottom: 10px;
+
+  flex-shrink: 0;
+}
+
+.lot-icon {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 13px;
+
+  background: rgba(231, 250, 238, 0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+
+  flex-shrink: 0;
+}
+
+.lot-information {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.lot-information h2 {
+  margin: 0 0 7px;
+
+  color: white;
+
+  font-size: 18px;
+}
+
+.lot-basic-details {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px 20px;
+}
+
+.lot-basic-details span {
+  color: #c9ddd3;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   EXPECTED VALUE
+========================================= */
+
+.make-offer-info {
+  width: 100%;
+
+  margin-bottom: 10px;
+
+  flex-shrink: 0;
+}
+
+.expected-value-box {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 16px;
+
+  border-radius: 12px;
+
+  background: rgba(37, 185, 95, 0.10);
+
+  border: 1px solid
+    rgba(37, 185, 95, 0.25);
+}
+
+.expected-value-box span {
+  color: #c9ddd3;
+
+  font-size: 12px;
+}
+
+.expected-value-box strong {
+  color: #6ff09a;
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   OFFER INPUT
+========================================= */
+
+.make-offer-input-section {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid
+    rgba(226, 238, 230, 0.20);
+
+  margin-bottom: 10px;
+
+  flex-shrink: 0;
+}
+
+.make-offer-input-section label {
+  display: block;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  margin-bottom: 3px;
+}
+
+.make-offer-helper {
+  margin: 0 0 9px;
+
+  color: #a9c1b5;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.offer-input-wrapper {
+  width: 100%;
+
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+
+  border-radius: 11px;
+
+  background: #000;
+
+  border: 1px solid #444;
+
+  overflow: hidden;
+}
+
+.offer-input-wrapper > span {
+  width: 50px;
+
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #6ff09a;
+
+  font-size: 20px;
+
+  font-weight: 800;
+
+  border-right: 1px solid #333;
+}
+
+.offer-input-wrapper input {
+  flex: 1;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: #000;
+
+  color: white;
+
+  padding: 0 14px;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.offer-input-wrapper input::placeholder {
+  color: #777;
+}
+
+.offer-input-wrapper:focus-within {
+  border-color: #25b95f;
+
+  box-shadow:
+    0 0 0 2px
+    rgba(37, 185, 95, 0.12);
+}
+
+
+/* =========================================
+   CALCULATION
+========================================= */
+
+.offer-calculation {
+  width: 100%;
+
+  flex: 1;
+
+  min-height: 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+
+  margin-bottom: 10px;
+}
+
+.calculation-item {
+  min-height: 120px;
+
+  padding: 15px;
+
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid
+    rgba(226, 238, 230, 0.20);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  gap: 10px;
+
+  transition: 0.2s ease;
+}
+
+.calculation-item:hover {
+  background: rgba(37, 185, 95, 0.12);
+
+  border-color: #25b95f;
+
+  transform: translateY(-2px);
+}
+
+.calculation-item span {
+  color: #a9c1b5;
+
+  font-size: 12px;
+}
+
+.calculation-item strong {
+  color: #6ff09a;
+
+  font-size: 24px;
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.submit-offer-button {
+  position: relative;
+
+  width: 100%;
+
+  padding: 14px 18px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #25b95f;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition: 0.2s ease;
+
+  flex-shrink: 0;
+}
+
+.submit-offer-button:hover {
+  background: #1fa653;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 16px
+    rgba(37, 185, 95, 0.20);
+}
+
+.submit-offer-button:active {
+  transform: scale(0.98);
+}
+
+
+/* TEXT ALWAYS IN CENTER */
+
+.submit-offer-text {
+  text-align: center;
+}
+
+
+/* ARROW ALWAYS ON RIGHT */
+
+.submit-offer-arrow {
+  position: absolute;
+
+  right: 18px;
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+  .make-offer-screen {
+    padding: 15px;
+  }
+
+  .offer-calculation {
+    gap: 10px;
+  }
+
+  .calculation-item {
+    min-height: 105px;
+  }
+
+  .calculation-item strong {
+    font-size: 21px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .make-offer-screen {
+    height: auto;
+
+    min-height: 100vh;
+
+    overflow-y: auto;
+
+    padding: 10px;
+  }
+
+  .make-offer-card {
+    height: auto;
+  }
+
+  .make-offer-back {
+    padding: 9px 14px;
+
+    font-size: 12px;
+
+    margin-bottom: 10px;
+  }
+
+  .make-offer-header {
+    gap: 10px;
+
+    margin-bottom: 10px;
+  }
+
+  .make-offer-title-icon {
+    width: 45px;
+    height: 45px;
+
+    border-radius: 11px;
+
+    font-size: 24px;
+  }
+
+  .make-offer-header h1 {
+    font-size: 21px;
+  }
+
+  .make-offer-header p {
+    font-size: 10px;
+  }
+
+  .make-offer-lot {
+    padding: 11px;
+
+    gap: 9px;
+
+    margin-bottom: 8px;
+  }
+
+  .lot-icon {
+    width: 48px;
+    height: 48px;
+
+    font-size: 25px;
+  }
+
+  .lot-information h2 {
+    font-size: 14px;
+
+    margin-bottom: 5px;
+  }
+
+  .lot-basic-details {
+    gap: 5px 10px;
+  }
+
+  .lot-basic-details span {
+    font-size: 10px;
+  }
+
+  .make-offer-info {
+    margin-bottom: 8px;
+  }
+
+  .expected-value-box {
+    padding: 10px 12px;
+  }
+
+  .expected-value-box span {
+    font-size: 10px;
+  }
+
+  .expected-value-box strong {
+    font-size: 17px;
+  }
+
+  .make-offer-input-section {
+    padding: 11px;
+
+    margin-bottom: 8px;
+  }
+
+  .make-offer-input-section label {
+    font-size: 13px;
+  }
+
+  .make-offer-helper {
+    font-size: 9px;
+
+    margin-bottom: 7px;
+  }
+
+  .offer-input-wrapper {
+    height: 47px;
+  }
+
+  .offer-input-wrapper > span {
+    width: 42px;
+
+    font-size: 18px;
+  }
+
+  .offer-input-wrapper input {
+    font-size: 18px;
+  }
+
+  .offer-calculation {
+    flex: none;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 8px;
+
+    margin-bottom: 8px;
+  }
+
+  .calculation-item {
+    min-height: 95px;
+
+    padding: 10px;
+  }
+
+  .calculation-item span {
+    font-size: 9px;
+  }
+
+  .calculation-item strong {
+    font-size: 17px;
+  }
+
+  .submit-offer-button {
+    padding: 12px;
+
+    font-size: 13px;
+  }
+
+  .submit-offer-arrow {
+    right: 14px;
+
+    font-size: 18px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .make-offer-screen {
+    padding: 8px;
+  }
+
+  .make-offer-lot {
+    padding: 9px;
+  }
+
+  .lot-icon {
+    width: 42px;
+    height: 42px;
+
+    font-size: 21px;
+  }
+
+  .lot-information h2 {
+    font-size: 13px;
+  }
+
+  .lot-basic-details span {
+    font-size: 9px;
+  }
+
+  .calculation-item {
+    min-height: 88px;
+  }
+
+  .calculation-item strong {
+    font-size: 15px;
+  }
+
+  .submit-offer-button {
+    font-size: 12px;
+  }
+
+  .submit-offer-arrow {
+    right: 12px;
+  }
+}

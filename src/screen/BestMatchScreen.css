@@ -1,0 +1,553 @@
+.best-match-screen {
+  min-height: 100vh;
+  background: #071a2b;
+  color: white;
+  padding: 30px 20px 55px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.best-match-back-button {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+
+  border: none;
+  background: #25b95f;
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  z-index: 10;
+}
+
+.best-match-back-button:hover {
+  background: #1fa553;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   LISTEN BUTTON - TOP RIGHT
+========================= */
+
+.best-match-speaker-area {
+  position: absolute;
+
+  top: 25px;
+  right: 25px;
+
+  width: auto;
+
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 10;
+}
+
+.best-match-speaker-button {
+  border: none;
+
+  background: #25b95f;
+  color: white;
+
+  padding: 11px 18px;
+
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.best-match-speaker-button:hover {
+  background: #1fa553;
+
+  transform: translateY(-2px);
+}
+
+.best-match-speaker-button.speaking {
+  box-shadow: 0 0 0 4px rgba(50, 200, 110, 0.25);
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.best-match-content {
+  width: min(650px, 100%);
+
+  margin: 35px auto 0;
+
+  text-align: center;
+}
+
+/* =========================
+   TOP ICON
+========================= */
+
+.best-match-top-icon {
+  width: 78px;
+  height: 78px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #dff5e7;
+  color: #159447;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 38px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.best-match-content h1 {
+  margin: 0;
+
+  font-size: 34px;
+
+  line-height: 1.2;
+}
+
+.best-match-subtitle {
+  margin: 12px auto 20px;
+
+  color: #c8d4dd;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+}
+
+/* =========================
+   RECYCLER CARD
+========================= */
+
+.best-recycler-card {
+  background: white;
+
+  color: #173b2c;
+
+  border-radius: 22px;
+
+  padding: 24px;
+
+  text-align: left;
+
+  border: 3px solid #35c66d;
+
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================
+   BEST BADGE
+========================= */
+
+.best-badge {
+  display: inline-block;
+
+  background: #dff5e7;
+  color: #12823e;
+
+  padding: 7px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+
+  margin-bottom: 18px;
+}
+
+/* =========================
+   RECYCLER HEADER
+========================= */
+
+.best-recycler-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+}
+
+.best-recycler-avatar {
+  width: 62px;
+  height: 62px;
+
+  border-radius: 50%;
+
+  background: #e5f7ec;
+  color: #159447;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 31px;
+}
+
+.best-recycler-header h2 {
+  margin: 0 0 5px;
+
+  font-size: 23px;
+}
+
+.best-recycler-header p {
+  margin: 0;
+
+  color: #159447;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+/* =========================
+   OFFER PRICE
+========================= */
+
+.best-offer-price {
+  margin-top: 22px;
+
+  padding: 17px;
+
+  background: #f2f8f4;
+
+  border-radius: 15px;
+
+  text-align: center;
+}
+
+.best-offer-price small {
+  display: block;
+
+  color: #65756d;
+
+  font-size: 12px;
+
+  margin-bottom: 4px;
+}
+
+.best-offer-price strong {
+  display: block;
+
+  color: #12823e;
+
+  font-size: 31px;
+}
+
+.best-offer-price span {
+  display: inline-block;
+
+  margin-top: 5px;
+
+  color: #738079;
+
+  font-size: 11px;
+}
+
+/* =========================
+   RECYCLER INFO
+========================= */
+
+.best-recycler-info {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 12px;
+
+  margin-top: 15px;
+}
+
+.best-recycler-info > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  background: #f7f9f8;
+
+  padding: 13px;
+
+  border-radius: 13px;
+}
+
+.best-recycler-info > div > span {
+  font-size: 22px;
+}
+
+.best-recycler-info section small {
+  display: block;
+
+  color: #66756e;
+
+  font-size: 11px;
+
+  margin-bottom: 3px;
+}
+
+.best-recycler-info section strong {
+  font-size: 14px;
+}
+
+/* =========================
+   ESTIMATED AMOUNT
+========================= */
+
+.estimated-amount {
+  margin-top: 15px;
+
+  padding: 15px;
+
+  border-top: 1px solid #dfe7e2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.estimated-amount span {
+  color: #66756e;
+
+  font-size: 14px;
+}
+
+.estimated-amount strong {
+  color: #173b2c;
+
+  font-size: 23px;
+}
+
+/* =========================
+   WHY SECTION
+========================= */
+
+.why-section {
+  margin-top: 25px;
+
+  text-align: left;
+}
+
+.why-section h2 {
+  margin: 0 0 13px;
+
+  font-size: 21px;
+}
+
+.reason-list {
+  background: #10283b;
+
+  border-radius: 17px;
+
+  padding: 15px 18px;
+}
+
+.reason-list div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 9px 0;
+}
+
+.reason-list div + div {
+  border-top: 1px solid #294153;
+}
+
+.reason-list span {
+  width: 23px;
+  height: 23px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #dff5e7;
+
+  color: #12823e;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+
+  font-weight: bold;
+}
+
+.reason-list p {
+  margin: 0;
+
+  color: #d2dce3;
+
+  font-size: 14px;
+}
+
+/* =========================
+   SAFE MESSAGE
+========================= */
+
+.best-match-safe {
+  margin: 20px auto;
+
+  color: #c5d1d9;
+
+  font-size: 13px;
+}
+
+/* =========================
+   ACCEPT OFFER
+========================= */
+
+.accept-offer-area {
+  position: relative;
+
+  width: min(430px, 100%);
+
+  margin: 32px auto 0;
+}
+
+.accept-offer-button {
+  width: 100%;
+
+  border: none;
+
+  background: #25b95f;
+  color: white;
+
+  padding: 18px 25px;
+
+  border-radius: 15px;
+
+  font-size: 17px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow: 0 8px 20px rgba(37, 185, 95, 0.25);
+
+  transition: 0.2s ease;
+}
+
+.accept-offer-button:hover {
+  background: #1fa553;
+
+  transform: translateY(-2px);
+}
+
+.accept-offer-button span {
+  margin-left: 12px;
+
+  font-size: 22px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .best-match-screen {
+    padding: 20px 14px 45px;
+  }
+
+  /* Back button */
+
+  .best-match-back-button {
+    top: 15px;
+    left: 15px;
+
+    padding: 9px 14px;
+
+    font-size: 14px;
+  }
+
+  /* Listen button */
+
+  .best-match-speaker-area {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: auto;
+
+    margin: 0;
+  }
+
+  .best-match-speaker-button {
+    padding: 9px 14px;
+
+    font-size: 13px;
+
+    border-radius: 11px;
+  }
+
+  /* Main content */
+
+  .best-match-content {
+    margin-top: 65px;
+  }
+
+  .best-match-content h1 {
+    font-size: 27px;
+  }
+
+  .best-match-subtitle {
+    font-size: 15px;
+  }
+
+  /* Recycler card */
+
+  .best-recycler-card {
+    padding: 18px;
+  }
+
+  /* Recycler information */
+
+  .best-recycler-info {
+    grid-template-columns: 1fr;
+  }
+
+  /* Estimated amount */
+
+  .estimated-amount strong {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,895 @@
+/* =========================================
+   MAIN SCREEN
+========================================= */
+
+.admin-clusters-screen {
+  width: 100vw;
+  height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071b14,
+      #0b3023,
+      #063c29
+    );
+
+  color: white;
+
+  padding: 16px 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   TOP NAVIGATION
+========================================= */
+
+.admin-clusters-top {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  margin-bottom: 8px;
+}
+
+.admin-clusters-back {
+  border: none;
+
+  background: #25b95f;
+  color: white;
+
+  padding: 9px 16px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.admin-clusters-back:hover {
+  background: #20a954;
+
+  transform: translateY(-1px);
+}
+
+.admin-clusters-top-title {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.admin-clusters-container {
+  width: 100%;
+
+  flex: 1;
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-clusters-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  flex-shrink: 0;
+}
+
+.admin-clusters-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.admin-clusters-logo {
+  width: 58px;
+  height: 58px;
+
+  border-radius: 15px;
+
+  background: rgba(37, 185, 95, 0.12);
+
+  border: 1px solid rgba(37, 185, 95, 0.22);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  flex-shrink: 0;
+}
+
+.admin-clusters-heading h1 {
+  margin: 0;
+
+  font-size: 25px;
+
+  font-weight: 800;
+
+  color: white;
+}
+
+.admin-clusters-heading p {
+  margin: 4px 0 0;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   TOTAL BOX
+========================================= */
+
+.admin-clusters-total-box {
+  min-width: 165px;
+
+  padding: 11px 15px;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  flex-shrink: 0;
+}
+
+.admin-clusters-total-box > span {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 10px;
+
+  background: rgba(37, 185, 95, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+}
+
+.admin-clusters-total-box div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.admin-clusters-total-box strong {
+  font-size: 21px;
+
+  line-height: 1;
+}
+
+.admin-clusters-total-box small {
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* =========================================
+   INFORMATION NOTE
+========================================= */
+
+.admin-clusters-note {
+  width: 100%;
+
+  padding: 9px 13px;
+
+  border-radius: 11px;
+
+  background: rgba(37, 185, 95, 0.07);
+
+  border: 1px solid rgba(37, 185, 95, 0.16);
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  box-sizing: border-box;
+
+  flex-shrink: 0;
+}
+
+.admin-clusters-note > span {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 8px;
+
+  background: rgba(37, 185, 95, 0.13);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+
+  flex-shrink: 0;
+}
+
+.admin-clusters-note strong {
+  display: block;
+
+  font-size: 11px;
+
+  color: #55df88;
+}
+
+.admin-clusters-note p {
+  margin: 2px 0 0;
+
+  font-size: 10px;
+
+  line-height: 1.35;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* =========================================
+   SUMMARY GRID
+========================================= */
+
+.admin-clusters-summary-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.admin-clusters-summary-card {
+  min-height: 66px;
+
+  padding: 10px 13px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  box-sizing: border-box;
+}
+
+.admin-clusters-summary-icon {
+  width: 36px;
+  height: 36px;
+
+  border-radius: 9px;
+
+  background: rgba(37, 185, 95, 0.14);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+
+  flex-shrink: 0;
+}
+
+.admin-clusters-summary-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.admin-clusters-summary-card span {
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.admin-clusters-summary-card strong {
+  font-size: 19px;
+
+  color: white;
+}
+
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.admin-clusters-filters {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 180px;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.admin-clusters-search {
+  height: 42px;
+
+  padding: 0 13px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  box-sizing: border-box;
+}
+
+.admin-clusters-search > span {
+  font-size: 14px;
+
+  opacity: 0.7;
+}
+
+.admin-clusters-search input {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 12px;
+}
+
+.admin-clusters-search input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.admin-clusters-filters select {
+  height: 42px;
+
+  padding: 0 12px;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: #0b2b20;
+
+  color: white;
+
+  font-size: 12px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+.admin-clusters-filters select option {
+  background: #0b2b20;
+
+  color: white;
+}
+
+
+/* =========================================
+   LIST / TABLE CARD
+========================================= */
+
+.admin-clusters-list-card {
+  flex: 1;
+  min-height: 0;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+/* =========================================
+   TABLE HEADING
+========================================= */
+
+.admin-clusters-list-heading {
+  padding: 12px 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.admin-clusters-list-heading h2 {
+  margin: 0;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  color: white;
+}
+
+.admin-clusters-list-heading p {
+  margin: 3px 0 0;
+
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.admin-clusters-table-wrapper {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow: auto;
+
+  width: 100%;
+}
+
+.admin-clusters-table-wrapper::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.admin-clusters-table-wrapper::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.admin-clusters-table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(37, 185, 95, 0.45);
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.admin-clusters-table-wrapper table {
+  width: 100%;
+
+  min-width: 1100px;
+
+  border-collapse: collapse;
+
+  font-size: 11px;
+}
+
+.admin-clusters-table-wrapper th {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 2;
+
+  padding: 10px 11px;
+
+  text-align: left;
+
+  background: #0b2b20;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.admin-clusters-table-wrapper td {
+  padding: 10px 11px;
+
+  color: rgba(255, 255, 255, 0.8);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+.admin-clusters-table-wrapper tbody tr {
+  transition: 0.15s ease;
+}
+
+.admin-clusters-table-wrapper tbody tr:hover {
+  background: rgba(37, 185, 95, 0.05);
+}
+
+
+/* =========================================
+   CLUSTER ID
+========================================= */
+
+.admin-cluster-id {
+  color: #25b95f;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   CLUSTER NAME
+========================================= */
+
+.admin-cluster-name {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.admin-cluster-name > span {
+  width: 26px;
+  height: 26px;
+
+  border-radius: 7px;
+
+  background: rgba(37, 185, 95, 0.13);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+
+  flex-shrink: 0;
+}
+
+.admin-cluster-name strong {
+  color: white;
+}
+
+
+/* =========================================
+   COLLECTORS
+========================================= */
+
+.admin-cluster-collectors {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.admin-cluster-collectors > span {
+  width: 26px;
+  height: 26px;
+
+  border-radius: 7px;
+
+  background: rgba(37, 185, 95, 0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+
+  flex-shrink: 0;
+}
+
+.admin-cluster-collectors strong {
+  color: white;
+}
+
+
+/* =========================================
+   WEIGHT
+========================================= */
+
+.admin-cluster-weight {
+  color: #55df88;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admin-cluster-status {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+.admin-cluster-status.ready {
+  background: rgba(37, 185, 95, 0.14);
+
+  color: #55df88;
+
+  border: 1px solid rgba(37, 185, 95, 0.25);
+}
+
+.admin-cluster-status.accumulating {
+  background: rgba(255, 193, 7, 0.12);
+
+  color: #ffd35c;
+
+  border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+
+/* =========================================
+   VIEW BUTTON
+========================================= */
+
+.admin-cluster-view-button {
+  border: none;
+
+  border-radius: 7px;
+
+  padding: 6px 11px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.15s ease;
+}
+
+.admin-cluster-view-button:hover {
+  background: #25b95f;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.admin-clusters-empty {
+  height: 250px;
+
+  text-align: center;
+}
+
+.admin-clusters-empty > div {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+.admin-clusters-empty span {
+  font-size: 27px;
+
+  opacity: 0.5;
+}
+
+.admin-clusters-empty strong {
+  font-size: 13px;
+
+  color: white;
+}
+
+.admin-clusters-empty p {
+  margin: 0;
+
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .admin-clusters-screen {
+    height: auto;
+
+    min-height: 100vh;
+
+    overflow-y: auto;
+
+    padding: 14px 16px;
+  }
+
+  .admin-clusters-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .admin-clusters-list-card {
+    min-height: 430px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .admin-clusters-screen {
+    padding: 12px;
+  }
+
+  .admin-clusters-top-title {
+    display: none;
+  }
+
+  .admin-clusters-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+  .admin-clusters-heading {
+    align-items: flex-start;
+  }
+
+  .admin-clusters-logo {
+    width: 48px;
+    height: 48px;
+
+    font-size: 24px;
+  }
+
+  .admin-clusters-heading h1 {
+    font-size: 20px;
+  }
+
+  .admin-clusters-heading p {
+    font-size: 10px;
+
+    line-height: 1.4;
+  }
+
+  .admin-clusters-total-box {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+  .admin-clusters-note {
+    align-items: flex-start;
+  }
+
+  .admin-clusters-summary-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+  .admin-clusters-summary-card {
+    min-height: 62px;
+
+    padding: 8px;
+  }
+
+  .admin-clusters-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-clusters-list-card {
+    min-height: 430px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .admin-clusters-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-clusters-heading h1 {
+    font-size: 18px;
+  }
+}

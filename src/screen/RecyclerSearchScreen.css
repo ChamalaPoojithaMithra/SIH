@@ -1,0 +1,617 @@
+.recycler-search-screen {
+  min-height: 100vh;
+
+  background: #071b33;
+
+  color: white;
+
+  padding: 30px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.recycler-search-container {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  min-height: calc(100vh - 60px);
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.recycler-search-back {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  border: none;
+
+  background: #22c55e !important;
+
+  background-color: #22c55e !important;
+
+  color: white !important;
+
+  padding: 12px 20px;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  box-shadow:
+    0 8px 20px rgba(34, 197, 94, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.recycler-search-back:hover {
+  background: #16a34a !important;
+
+  background-color: #16a34a !important;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(34, 197, 94, 0.35);
+}
+
+.recycler-search-back:active {
+  background: #15803d !important;
+
+  background-color: #15803d !important;
+
+  transform: scale(0.97);
+}
+
+
+/* =========================================================
+   SPEAKER
+========================================================= */
+
+.recycler-search-speaker-area {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 150px;
+  height: 150px;
+
+  z-index: 30;
+}
+
+.recycler-search-speaker {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  height: 52px;
+
+  padding: 0 22px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #22c55e;
+
+  color: white;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(34, 197, 94, 0.25);
+
+  z-index: 5;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.recycler-search-speaker:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(34, 197, 94, 0.35);
+}
+
+.recycler-search-speaker.speaking {
+  transform: scale(1.03);
+
+  box-shadow:
+    0 10px 28px rgba(34, 197, 94, 0.45);
+}
+
+
+/* =========================================================
+   FINGER
+========================================================= */
+
+.recycler-search-finger-effect {
+  position: absolute;
+
+  top: 52px;
+  right: 0;
+
+  width: 150px;
+  height: 100px;
+
+  pointer-events: none;
+
+  z-index: 31;
+}
+
+.recycler-search-finger {
+  position: absolute;
+
+  left: 75px;
+  top: 18px;
+
+  transform: translateX(-50%);
+
+  font-size: 40px;
+
+  animation: none;
+}
+
+
+/* =========================================================
+   RINGS
+========================================================= */
+
+.recycler-search-ring {
+  position: absolute;
+
+  top: 50px;
+  left: 75px;
+
+  width: 25px;
+  height: 25px;
+
+  border:
+    3px solid
+    rgba(34, 197, 94, 0.9);
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  animation:
+    recyclerSearchRingPulse
+    2.4s
+    ease-out
+    infinite;
+}
+
+.ring-two {
+  animation-delay: 0.7s;
+}
+
+.ring-three {
+  animation-delay: 1.4s;
+}
+
+@keyframes recyclerSearchRingPulse {
+  0% {
+    transform:
+      translate(-50%, -50%)
+      scale(0.6);
+
+    opacity: 0.9;
+  }
+
+  70% {
+    transform:
+      translate(-50%, -50%)
+      scale(2.2);
+
+    opacity: 0.2;
+  }
+
+  100% {
+    transform:
+      translate(-50%, -50%)
+      scale(2.5);
+
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.recycler-search-main {
+  text-align: center;
+
+  padding-top: 95px;
+
+  max-width: 700px;
+
+  margin: 0 auto;
+}
+
+.recycler-search-icon {
+  font-size: 58px;
+
+  margin-bottom: 12px;
+}
+
+.recycler-search-main h1 {
+  margin: 0;
+
+  font-size: 38px;
+
+  font-weight: 800;
+}
+
+.recycler-search-subtitle {
+  margin-top: 12px;
+
+  color: #cbd5e1;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SEARCH ANIMATION
+========================================================= */
+
+.recycler-search-animation {
+  position: relative;
+
+  width: 180px;
+  height: 180px;
+
+  margin: 30px auto;
+}
+
+.search-circle {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 90px;
+  height: 90px;
+
+  transform:
+    translate(-50%, -50%);
+
+  border:
+    4px solid
+    #22c55e;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 0 0 10px
+      rgba(34, 197, 94, 0.08),
+
+    0 0 0 20px
+      rgba(34, 197, 94, 0.05);
+}
+
+.search-circle-inner {
+  font-size: 38px;
+}
+
+
+/* =========================================================
+   SEARCH WAVES
+========================================================= */
+
+.search-wave {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  width: 40px;
+  height: 40px;
+
+  border:
+    3px solid
+    rgba(34, 197, 94, 0.6);
+
+  border-radius: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  animation:
+    searchWave
+    2.4s
+    ease-out
+    infinite;
+}
+
+.wave-two {
+  animation-delay: 0.8s;
+}
+
+.wave-three {
+  animation-delay: 1.6s;
+}
+
+@keyframes searchWave {
+  0% {
+    width: 40px;
+    height: 40px;
+
+    opacity: 0.8;
+  }
+
+  100% {
+    width: 180px;
+    height: 180px;
+
+    opacity: 0;
+  }
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.recycler-search-status {
+  font-size: 18px;
+
+  font-weight: 600;
+
+  color: #86efac;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   LOT CARD
+========================================================= */
+
+.recycler-search-lot-card {
+  width: 100%;
+
+  background: white;
+
+  color: #173b2c;
+
+  border-radius: 20px;
+
+  padding: 8px 22px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 15px 35px
+    rgba(0, 0, 0, 0.2);
+}
+
+.lot-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 17px 5px;
+
+  border-bottom:
+    1px solid
+    #e5e7eb;
+
+  text-align: left;
+}
+
+.lot-row:last-child {
+  border-bottom: none;
+}
+
+.lot-row span {
+  color: #64748b;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+.lot-row strong {
+  font-size: 18px;
+
+  text-align: right;
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.recycler-search-trust {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.trust-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  background:
+    rgba(34, 197, 94, 0.12);
+
+  border:
+    1px solid
+    rgba(34, 197, 94, 0.3);
+
+  color: #bbf7d0;
+
+  padding: 10px 15px;
+
+  border-radius: 12px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+.trust-item span {
+  color: #22c55e;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .recycler-search-screen {
+    padding: 20px;
+  }
+
+  .recycler-search-container {
+    min-height:
+      calc(100vh - 40px);
+  }
+
+  .recycler-search-back {
+    padding: 10px 15px;
+
+    font-size: 14px;
+
+    background: #22c55e !important;
+
+    background-color: #22c55e !important;
+
+    color: white !important;
+  }
+
+  .recycler-search-speaker-area {
+    width: 135px;
+  }
+
+  .recycler-search-speaker {
+    height: 48px;
+
+    padding: 0 16px;
+
+    font-size: 14px;
+  }
+
+  .recycler-search-finger-effect {
+    top: 48px;
+
+    width: 135px;
+  }
+
+  .recycler-search-finger {
+    left: 67.5px;
+
+    top: 18px;
+
+    font-size: 36px;
+  }
+
+  .recycler-search-ring {
+    left: 67.5px;
+
+    top: 45px;
+  }
+
+  .recycler-search-main {
+    padding-top: 115px;
+  }
+
+  .recycler-search-main h1 {
+    font-size: 29px;
+  }
+
+  .recycler-search-subtitle {
+    font-size: 15px;
+  }
+
+  .recycler-search-animation {
+    width: 150px;
+
+    height: 150px;
+  }
+
+  .search-circle {
+    width: 75px;
+
+    height: 75px;
+  }
+
+  .search-circle-inner {
+    font-size: 31px;
+  }
+
+  .lot-row {
+    padding: 15px 3px;
+  }
+
+  .lot-row span {
+    font-size: 13px;
+  }
+
+  .lot-row strong {
+    font-size: 16px;
+  }
+
+  .trust-item {
+    font-size: 13px;
+  }
+}

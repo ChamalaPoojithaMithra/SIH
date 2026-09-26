@@ -1,0 +1,492 @@
+* {
+  box-sizing: border-box;
+}
+
+.admin-login-screen {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071b14,
+      #0b3023,
+      #063c29
+    );
+
+  color: white;
+
+  padding: 18px 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   TOP NAVIGATION
+========================================= */
+
+.admin-top-navigation {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  flex-shrink: 0;
+}
+
+.admin-back-button {
+  border: none;
+  border-radius: 10px;
+
+  background: #25b95f;
+  color: white;
+
+  padding: 10px 18px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.admin-back-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.08);
+}
+
+.admin-back-button:active {
+  transform: scale(0.98);
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.admin-login-content {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding: 10px 0;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-login-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 18px;
+
+  margin-bottom: 24px;
+}
+
+.admin-login-logo {
+  width: 68px;
+  height: 68px;
+
+  border-radius: 18px;
+
+  background: rgba(37, 185, 95, 0.15);
+
+  border: 1px solid rgba(37, 185, 95, 0.35);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 36px;
+
+  flex-shrink: 0;
+}
+
+.admin-login-header h1 {
+  margin: 0;
+
+  font-size: 30px;
+  font-weight: 800;
+
+  color: white;
+}
+
+.admin-login-subtitle {
+  margin: 6px 0 0;
+
+  color: #b9d8ca;
+
+  font-size: 14px;
+}
+
+/* =========================================
+   LOGIN FORM SECTION
+========================================= */
+
+.admin-login-form-section {
+  width: 100%;
+
+  max-width: 620px;
+
+  margin: 0 auto;
+
+  padding: 28px 32px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: 18px;
+
+  backdrop-filter: blur(8px);
+}
+
+.admin-login-heading {
+  margin-bottom: 22px;
+}
+
+.admin-login-heading h2 {
+  margin: 0;
+
+  font-size: 21px;
+  font-weight: 800;
+
+  color: white;
+}
+
+.admin-login-heading p {
+  margin: 6px 0 0;
+
+  color: #a9c9bb;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.admin-form-group {
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-bottom: 18px;
+}
+
+.admin-form-group label {
+  color: #d8eee4;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-form-group input {
+  width: 100%;
+
+  padding: 13px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 10px;
+
+  background: #06120e;
+
+  color: white;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.admin-form-group input::placeholder {
+  color: #7f968c;
+}
+
+.admin-form-group input:focus {
+  border-color: #25b95f;
+
+  box-shadow: 0 0 0 2px rgba(37, 185, 95, 0.12);
+}
+
+/* =========================================
+   SIGN IN BUTTON
+========================================= */
+
+.admin-login-button {
+  position: relative;
+
+  width: 100%;
+
+  padding: 14px 18px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #25b95f;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s ease;
+
+  margin-top: 5px;
+}
+
+.admin-login-button:hover {
+  filter: brightness(1.08);
+
+  transform: translateY(-1px);
+}
+
+.admin-login-button:active {
+  transform: scale(0.98);
+}
+
+.admin-login-button-text {
+  text-align: center;
+}
+
+.admin-login-button-arrow {
+  position: absolute;
+
+  right: 18px;
+
+  font-size: 20px;
+}
+
+/* =========================================
+   SECURITY NOTE
+========================================= */
+
+.admin-security-note {
+  width: 100%;
+  max-width: 620px;
+
+  margin: 18px auto 0;
+
+  padding: 13px 16px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  border-radius: 12px;
+
+  background: rgba(37, 185, 95, 0.08);
+
+  border: 1px solid rgba(37, 185, 95, 0.18);
+}
+
+.admin-security-note > span {
+  font-size: 20px;
+}
+
+.admin-security-note div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.admin-security-note strong {
+  color: #d9f4e5;
+
+  font-size: 13px;
+}
+
+.admin-security-note small {
+  color: #91b4a4;
+
+  font-size: 11px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .admin-login-screen {
+    padding: 16px 18px;
+
+    overflow-y: auto;
+  }
+
+  .admin-login-content {
+    justify-content: center;
+
+    padding: 25px 0;
+  }
+
+  .admin-login-header {
+    margin-bottom: 20px;
+  }
+
+  .admin-login-logo {
+    width: 58px;
+    height: 58px;
+
+    font-size: 30px;
+  }
+
+  .admin-login-header h1 {
+    font-size: 25px;
+  }
+
+  .admin-login-subtitle {
+    font-size: 12px;
+  }
+
+  .admin-login-form-section {
+    padding: 24px 22px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .admin-login-screen {
+    padding: 14px;
+
+    min-height: 100vh;
+    height: auto;
+  }
+
+  .admin-login-content {
+    padding: 20px 0 25px;
+  }
+
+  .admin-login-header {
+    flex-direction: column;
+
+    text-align: center;
+
+    gap: 10px;
+  }
+
+  .admin-login-logo {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 15px;
+  }
+
+  .admin-login-header h1 {
+    font-size: 23px;
+  }
+
+  .admin-login-subtitle {
+    font-size: 12px;
+  }
+
+  .admin-login-form-section {
+    padding: 21px 17px;
+
+    border-radius: 15px;
+  }
+
+  .admin-login-heading h2 {
+    font-size: 19px;
+  }
+
+  .admin-form-group {
+    margin-bottom: 16px;
+  }
+
+  .admin-form-group input {
+    padding: 12px;
+
+    font-size: 14px;
+  }
+
+  .admin-login-button {
+    padding: 13px 16px;
+  }
+
+  .admin-login-button-arrow {
+    right: 14px;
+  }
+
+  .admin-security-note {
+    padding: 12px;
+
+    margin-top: 14px;
+  }
+
+  .admin-security-note strong {
+    font-size: 12px;
+  }
+
+  .admin-security-note small {
+    font-size: 10px;
+  }
+}
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media (max-height: 650px) and (min-width: 769px) {
+
+  .admin-login-content {
+    justify-content: flex-start;
+
+    padding-top: 10px;
+  }
+
+  .admin-login-header {
+    margin-bottom: 12px;
+  }
+
+  .admin-login-logo {
+    width: 52px;
+    height: 52px;
+
+    font-size: 27px;
+  }
+
+  .admin-login-form-section {
+    padding: 18px 25px;
+  }
+
+  .admin-form-group {
+    margin-bottom: 12px;
+  }
+
+  .admin-security-note {
+    margin-top: 10px;
+  }
+}

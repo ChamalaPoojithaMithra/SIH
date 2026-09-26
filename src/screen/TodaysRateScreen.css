@@ -1,0 +1,209 @@
+.today-rate-screen {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(53, 212, 119, 0.14), transparent 35%),
+    linear-gradient(135deg, #061b20, #08252a 55%, #06161b);
+  color: white;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+.today-rate-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.today-rate-back-button {
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.08);
+  color: white;
+  padding: 13px 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.today-rate-back-button:hover {
+  background: rgba(255,255,255,0.14);
+}
+
+.today-rate-speaker {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.today-rate-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 35px;
+}
+
+.today-rate-title-area {
+  text-align: center;
+}
+
+.today-rate-main-icon {
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 18px;
+  border-radius: 22px;
+  background: rgba(53, 212, 119, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 42px;
+}
+
+.today-rate-title-area h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.today-rate-title-area p {
+  margin: 10px auto 0;
+  max-width: 600px;
+  color: rgba(255,255,255,0.7);
+  font-size: 17px;
+}
+
+.today-rate-guidance {
+  width: fit-content;
+  margin: 28px auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: rgba(53, 212, 119, 0.1);
+  border: 1px solid rgba(53, 212, 119, 0.25);
+  color: rgba(255,255,255,0.8);
+  font-size: 15px;
+}
+
+.today-rate-finger {
+  font-size: 25px;
+  animation: todayRateFingerPulse 1.2s infinite;
+}
+
+@keyframes todayRateFingerPulse {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.today-rate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.today-rate-card {
+  position: relative;
+  min-height: 190px;
+  padding: 25px;
+  border-radius: 22px;
+  border: 2px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.07);
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.25s ease;
+}
+
+.today-rate-card:hover {
+  transform: translateY(-5px);
+  border-color: #35d477;
+  background: rgba(53,212,119,0.12);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.today-rate-icon {
+  font-size: 45px;
+  margin-bottom: 12px;
+}
+
+.today-rate-name {
+  font-size: 19px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.today-rate-price {
+  font-size: 32px;
+  font-weight: 900;
+  color: #35d477;
+}
+
+.today-rate-unit {
+  margin-top: 3px;
+  color: rgba(255,255,255,0.65);
+  font-size: 14px;
+}
+
+.today-rate-card-speaker {
+  position: absolute;
+  right: 14px;
+  top: 12px;
+  font-size: 17px;
+  opacity: 0.7;
+}
+
+.today-rate-demo-note {
+  margin: 28px auto 10px;
+  max-width: 850px;
+  padding: 15px 20px;
+  border-radius: 14px;
+  background: rgba(255,193,7,0.08);
+  border: 1px solid rgba(255,193,7,0.2);
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  font-size: 14px;
+}
+
+@media (max-width: 800px) {
+  .today-rate-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .today-rate-title-area h1 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 550px) {
+  .today-rate-screen {
+    padding: 18px;
+  }
+
+  .today-rate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .today-rate-title-area h1 {
+    font-size: 28px;
+  }
+
+  .today-rate-title-area p {
+    font-size: 15px;
+  }
+
+  .today-rate-guidance {
+    width: auto;
+    justify-content: center;
+    text-align: center;
+  }
+}

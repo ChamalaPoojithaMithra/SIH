@@ -1,0 +1,1139 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN SCREEN
+========================================= */
+
+.admin-price-demand-screen {
+  width: 100vw;
+  height: 100vh;
+
+  background: linear-gradient(
+    135deg,
+    #071b14,
+    #0b3023,
+    #063c29
+  );
+
+  color: white;
+
+  padding: 14px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   TOP NAVIGATION
+========================================= */
+
+.admin-price-demand-top {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  margin-bottom: 6px;
+}
+
+
+.admin-price-demand-back {
+  border: none;
+
+  background: #25b95f;
+
+  color: white !important;
+
+  padding: 8px 15px;
+
+  border-radius: 9px;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.admin-price-demand-back:hover {
+  background: #20a954;
+
+  transform: translateY(-1px);
+}
+
+
+.admin-price-demand-top-title {
+  font-size: 12px;
+
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.65) !important;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.admin-price-demand-container {
+  width: 100%;
+
+  flex: 1;
+
+  min-height: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-price-demand-header {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-price-demand-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+.admin-price-demand-logo {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 14px;
+
+  background: rgba(37, 185, 95, 0.12);
+
+  border: 1px solid rgba(37, 185, 95, 0.22);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 26px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-price-demand-heading h1 {
+  margin: 0;
+
+  font-size: 24px;
+
+  font-weight: 800;
+
+  color: white !important;
+}
+
+
+.admin-price-demand-heading p {
+  margin: 3px 0 0;
+
+  font-size: 11px;
+
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+
+/* =========================================
+   TOTAL RECORDS BOX
+========================================= */
+
+.admin-price-demand-total-box {
+  min-width: 155px;
+
+  padding: 9px 13px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-price-demand-total-box > span {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 9px;
+
+  background: rgba(37, 185, 95, 0.15);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 18px;
+}
+
+
+.admin-price-demand-total-box div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+
+.admin-price-demand-total-box strong {
+  font-size: 20px;
+
+  line-height: 1;
+
+  color: white !important;
+}
+
+
+.admin-price-demand-total-box small {
+  font-size: 9px;
+
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+
+/* =========================================
+   INFORMATION BOX
+========================================= */
+
+.admin-price-demand-info {
+  width: 100%;
+
+  padding: 7px 12px;
+
+  border-radius: 10px;
+
+  background: rgba(37, 185, 95, 0.07);
+
+  border: 1px solid rgba(37, 185, 95, 0.16);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-price-demand-info-icon {
+  width: 28px;
+  height: 28px;
+
+  border-radius: 8px;
+
+  background: rgba(37, 185, 95, 0.13);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 14px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-price-demand-info strong {
+  display: block;
+
+  font-size: 10px;
+
+  color: #55df88 !important;
+}
+
+
+.admin-price-demand-info p {
+  margin: 2px 0 0;
+
+  font-size: 9px;
+
+  line-height: 1.3;
+
+  color: rgba(255, 255, 255, 0.6) !important;
+}
+
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.admin-price-demand-summary {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-price-demand-summary-card {
+  min-height: 58px;
+
+  padding: 8px 11px;
+
+  border-radius: 11px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+}
+
+
+.admin-price-demand-summary-icon {
+  width: 32px;
+  height: 32px;
+
+  border-radius: 8px;
+
+  background: rgba(37, 185, 95, 0.14);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 15px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-price-demand-summary-card > div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+
+.admin-price-demand-summary-card span {
+  font-size: 9px;
+
+  color: rgba(255, 255, 255, 0.62) !important;
+}
+
+
+.admin-price-demand-summary-card strong {
+  font-size: 17px;
+
+  color: white !important;
+}
+
+
+/* =========================================
+   SEARCH + FILTERS
+========================================= */
+
+.admin-price-demand-controls {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 170px 170px;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-price-demand-search {
+  height: 38px;
+
+  padding: 0 12px;
+
+  border-radius: 9px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+
+.admin-price-demand-search > span {
+  font-size: 13px;
+
+  color: white !important;
+}
+
+
+.admin-price-demand-search input {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white !important;
+
+  font-size: 11px;
+}
+
+
+.admin-price-demand-search input::placeholder {
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+
+/* =========================================
+   DROPDOWNS
+========================================= */
+
+.admin-price-demand-controls select {
+  height: 38px;
+
+  padding: 0 11px;
+
+  border-radius: 9px;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  background: #0b2b20 !important;
+
+  color: white !important;
+
+  font-size: 11px;
+
+  outline: none;
+
+  cursor: pointer;
+
+  color-scheme: dark;
+}
+
+
+.admin-price-demand-controls select option {
+  background: #0b2b20 !important;
+
+  color: white !important;
+}
+
+
+/* =====================================================
+   LARGE PRICE & DEMAND TABLE CARD
+===================================================== */
+
+.admin-price-demand-table-section {
+  flex: 1;
+
+  min-height: 300px;
+
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+/* =========================================
+   TABLE CARD HEADER
+========================================= */
+
+.admin-price-demand-table-heading {
+  padding: 10px 14px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.admin-price-demand-table-heading h2 {
+  margin: 0;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  color: white !important;
+}
+
+
+.admin-price-demand-table-heading p {
+  margin: 2px 0 0;
+
+  font-size: 9px;
+
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.admin-price-demand-table-wrapper {
+  flex: 1;
+
+  min-height: 0;
+
+  width: 100%;
+
+  overflow: auto;
+
+  position: relative;
+}
+
+
+.admin-price-demand-table-wrapper::-webkit-scrollbar {
+  width: 7px;
+
+  height: 7px;
+}
+
+
+.admin-price-demand-table-wrapper::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+
+.admin-price-demand-table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(37, 185, 95, 0.45);
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.admin-price-demand-table {
+  width: 100%;
+
+  min-width: 1050px;
+
+  border-collapse: collapse;
+
+  font-size: 11px;
+}
+
+
+.admin-price-demand-table th {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 2;
+
+  padding: 11px 12px;
+
+  text-align: left;
+
+  background: #0b2b20;
+
+  color: rgba(255, 255, 255, 0.7) !important;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+
+.admin-price-demand-table td {
+  padding: 13px 12px;
+
+  color: rgba(255, 255, 255, 0.88) !important;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  vertical-align: middle;
+
+  white-space: nowrap;
+}
+
+
+.admin-price-demand-table tbody tr {
+  transition: 0.15s ease;
+}
+
+
+.admin-price-demand-table tbody tr:hover {
+  background: rgba(37, 185, 95, 0.06);
+}
+
+
+/* =========================================
+   RECORD ID
+========================================= */
+
+.price-record-id {
+  color: #25b95f !important;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   MATERIAL
+========================================= */
+
+.price-material {
+  display: flex;
+
+  align-items: center;
+
+  gap: 7px;
+}
+
+
+.price-material > span {
+  width: 27px;
+  height: 27px;
+
+  border-radius: 7px;
+
+  background: rgba(37, 185, 95, 0.13);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 12px;
+
+  flex-shrink: 0;
+}
+
+
+.price-material strong {
+  color: white !important;
+}
+
+
+/* =========================================
+   REFERENCE PRICE
+========================================= */
+
+.reference-price {
+  color: #55df88 !important;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.price-location {
+  color: rgba(255, 255, 255, 0.85) !important;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   DEMAND BADGES
+========================================= */
+
+.demand-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+
+.demand-high {
+  background: rgba(37, 185, 95, 0.14);
+
+  color: #55df88 !important;
+
+  border: 1px solid rgba(37, 185, 95, 0.25);
+}
+
+
+.demand-medium {
+  background: rgba(255, 193, 7, 0.12);
+
+  color: #ffd35c !important;
+
+  border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+
+.demand-low {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.7) !important;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================
+   SOURCE
+========================================= */
+
+.price-source {
+  color: rgba(255, 255, 255, 0.65) !important;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   VIEW BUTTON
+========================================= */
+
+.price-view-button {
+  border: none;
+
+  border-radius: 7px;
+
+  padding: 7px 12px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white !important;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  transition: 0.15s ease;
+}
+
+
+.price-view-button:hover {
+  background: #25b95f;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.admin-price-demand-empty {
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 200px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+.admin-price-demand-empty > div {
+  font-size: 27px;
+
+  opacity: 0.5;
+}
+
+
+.admin-price-demand-empty h3 {
+  margin: 8px 0 3px;
+
+  font-size: 13px;
+
+  color: white !important;
+}
+
+
+.admin-price-demand-empty p {
+  margin: 0;
+
+  font-size: 10px;
+
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.admin-price-demand-footer {
+  width: 100%;
+
+  padding: 6px 10px;
+
+  border-radius: 9px;
+
+  background: rgba(37, 185, 95, 0.06);
+
+  border: 1px solid rgba(37, 185, 95, 0.12);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-price-demand-footer > div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  flex-shrink: 0;
+}
+
+
+.admin-price-demand-footer > div span {
+  font-size: 13px;
+}
+
+
+.admin-price-demand-footer strong {
+  font-size: 9px;
+
+  color: #55df88 !important;
+}
+
+
+.admin-price-demand-footer p {
+  margin: 0;
+
+  font-size: 8px;
+
+  line-height: 1.3;
+
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+
+
+/* =========================================
+   GLOBAL WHITE TEXT FIX
+========================================= */
+
+.admin-price-demand-screen h1,
+.admin-price-demand-screen h2,
+.admin-price-demand-screen h3,
+.admin-price-demand-screen p,
+.admin-price-demand-screen span,
+.admin-price-demand-screen strong,
+.admin-price-demand-screen small,
+.admin-price-demand-screen td,
+.admin-price-demand-screen th {
+  color: white;
+}
+
+
+/* Re-apply secondary colors */
+
+.admin-price-demand-heading p,
+.admin-price-demand-info p,
+.admin-price-demand-table-heading p,
+.admin-price-demand-footer p,
+.admin-price-demand-total-box small,
+.admin-price-demand-summary-card span {
+  color: rgba(255, 255, 255, 0.65) !important;
+}
+
+
+/* Re-apply highlighted colors */
+
+.admin-price-demand-info strong {
+  color: #55df88 !important;
+}
+
+.price-record-id {
+  color: #25b95f !important;
+}
+
+.reference-price {
+  color: #55df88 !important;
+}
+
+.demand-high {
+  color: #55df88 !important;
+}
+
+.demand-medium {
+  color: #ffd35c !important;
+}
+
+.demand-low {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.admin-price-demand-footer strong {
+  color: #55df88 !important;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .admin-price-demand-screen {
+    height: auto;
+
+    min-height: 100vh;
+
+    overflow-y: auto;
+
+    padding: 14px 16px;
+  }
+
+
+  .admin-price-demand-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .admin-price-demand-controls {
+    grid-template-columns: 1fr 170px;
+
+    gap: 8px;
+  }
+
+
+  .admin-price-demand-search {
+    grid-column: 1 / -1;
+  }
+
+
+  .admin-price-demand-table-section {
+    min-height: 500px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .admin-price-demand-screen {
+    padding: 12px;
+  }
+
+
+  .admin-price-demand-top-title {
+    display: none;
+  }
+
+
+  .admin-price-demand-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 10px;
+  }
+
+
+  .admin-price-demand-heading {
+    align-items: flex-start;
+  }
+
+
+  .admin-price-demand-logo {
+    width: 48px;
+    height: 48px;
+
+    font-size: 24px;
+  }
+
+
+  .admin-price-demand-heading h1 {
+    font-size: 20px;
+  }
+
+
+  .admin-price-demand-heading p {
+    font-size: 10px;
+
+    line-height: 1.4;
+  }
+
+
+  .admin-price-demand-total-box {
+    width: 100%;
+
+    box-sizing: border-box;
+  }
+
+
+  .admin-price-demand-info {
+    align-items: flex-start;
+  }
+
+
+  .admin-price-demand-summary {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+
+  .admin-price-demand-summary-card {
+    min-height: 62px;
+
+    padding: 8px;
+  }
+
+
+  .admin-price-demand-controls {
+    grid-template-columns: 1fr;
+  }
+
+
+  .admin-price-demand-search {
+    grid-column: auto;
+  }
+
+
+  .admin-price-demand-table-section {
+    min-height: 500px;
+  }
+
+
+  .admin-price-demand-footer {
+    align-items: flex-start;
+  }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .admin-price-demand-summary {
+    grid-template-columns: 1fr;
+  }
+
+
+  .admin-price-demand-heading h1 {
+    font-size: 18px;
+  }
+
+
+  .admin-price-demand-table-section {
+    min-height: 520px;
+  }
+
+}

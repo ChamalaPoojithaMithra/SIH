@@ -1,0 +1,760 @@
+/* =========================================================
+   DEMO IVR SCREEN - E-WASTE CONNECT
+   Dark Green / Emerald UI Theme with Realistic Phone Mockup
+========================================================= */
+
+.demo-ivr-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(16, 185, 129, 0.15), transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(5, 150, 105, 0.12), transparent 40%),
+    linear-gradient(135deg, #051410 0%, #020a07 60%, #000000 100%);
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px 40px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ---------------------------------------------------------
+   TOPBAR
+--------------------------------------------------------- */
+.demo-ivr-topbar {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.demo-ivr-back-btn {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: #a7f3d0;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.demo-ivr-back-btn:hover {
+  background: rgba(16, 185, 129, 0.3);
+  color: #ffffff;
+  transform: translateX(-2px);
+}
+
+.demo-ivr-topbar-title {
+  text-align: center;
+}
+
+.demo-ivr-topbar-title h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+.demo-ivr-topbar-title p {
+  margin: 2px 0 0 0;
+  font-size: 12px;
+  color: #6ee7b7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.demo-ivr-voice-btn {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  color: #a7f3d0;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.demo-ivr-voice-btn.active {
+  background: #ef4444;
+  border-color: #f87171;
+  color: #ffffff;
+  animation: pulseStop 1.5s infinite;
+}
+
+@keyframes pulseStop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* ---------------------------------------------------------
+   PHONE DEVICE MOCKUP
+--------------------------------------------------------- */
+.demo-ivr-phone-device {
+  width: 100%;
+  max-width: 440px;
+  background: linear-gradient(180deg, #092019 0%, #04120e 100%);
+  border: 2px solid rgba(52, 211, 153, 0.4);
+  border-radius: 40px;
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.7),
+    0 0 35px rgba(16, 185, 129, 0.25),
+    inset 0 0 15px rgba(52, 211, 153, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Phone Top Notch */
+.demo-ivr-phone-notch {
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.demo-ivr-camera {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #020705;
+  border: 1px solid rgba(52, 211, 153, 0.25);
+}
+
+.demo-ivr-speaker-slit {
+  width: 55px;
+  height: 4px;
+  border-radius: 4px;
+  background: #020705;
+}
+
+/* Call Status Bar */
+.demo-ivr-call-status-bar {
+  background: rgba(16, 185, 129, 0.12);
+  border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.demo-ivr-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 8px #34d399;
+  display: inline-block;
+  animation: blinkLive 1.2s infinite;
+}
+
+@keyframes blinkLive {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.demo-ivr-call-state-text {
+  font-weight: 600;
+  color: #6ee7b7;
+  flex: 1;
+  margin-left: 8px;
+}
+
+.demo-ivr-caller-badge {
+  font-size: 11px;
+  color: #a7f3d0;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+/* ---------------------------------------------------------
+   SCREEN DISPLAY VIEWPORT
+--------------------------------------------------------- */
+.demo-ivr-screen-display {
+  padding: 24px 20px;
+  min-height: 290px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Step 1: Input Card */
+.demo-ivr-input-card {
+  text-align: center;
+}
+
+.demo-ivr-badge {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  color: #6ee7b7;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.demo-ivr-input-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.demo-ivr-hint {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.45;
+  margin: 0 0 20px 0;
+}
+
+.demo-ivr-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.demo-ivr-input-wrap {
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  border-radius: 16px;
+  padding: 4px 14px;
+  transition: all 0.2s ease;
+}
+
+.demo-ivr-input-wrap:focus-within {
+  border-color: #34d399;
+  box-shadow: 0 0 15px rgba(52, 211, 153, 0.3);
+}
+
+.demo-ivr-prefix {
+  color: #6ee7b7;
+  font-weight: 700;
+  font-size: 16px;
+  margin-right: 8px;
+}
+
+.demo-ivr-phone-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 10px 0;
+}
+
+.demo-ivr-start-call-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 20px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+}
+
+.demo-ivr-start-call-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.55);
+}
+
+.demo-ivr-start-call-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Step 2: Calling Animation */
+.demo-ivr-calling-screen {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.demo-ivr-calling-pulse {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pulse-ring {
+  position: absolute;
+  border: 2px solid #10b981;
+  border-radius: 50%;
+  animation: pulseOut 2s infinite ease-out;
+}
+
+.ring-1 { width: 50px; height: 50px; animation-delay: 0s; }
+.ring-2 { width: 70px; height: 70px; animation-delay: 0.5s; }
+.ring-3 { width: 90px; height: 90px; animation-delay: 1s; }
+
+@keyframes pulseOut {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+.calling-icon {
+  font-size: 34px;
+  z-index: 2;
+}
+
+.demo-ivr-calling-screen h3 {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.demo-ivr-calling-screen p {
+  margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Views (Welcome, Main Menu, etc.) */
+.demo-ivr-content-view {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.demo-ivr-view-header {
+  text-align: center;
+}
+
+.demo-ivr-view-header .view-icon {
+  font-size: 32px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.demo-ivr-view-header h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.demo-ivr-view-header .view-instruction {
+  margin: 4px 0 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Options Grid */
+.demo-ivr-options-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.demo-ivr-choice-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  border-radius: 14px;
+  padding: 10px 14px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.demo-ivr-choice-btn:hover {
+  background: rgba(16, 185, 129, 0.22);
+  border-color: #34d399;
+  transform: translateX(4px);
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.2);
+}
+
+.demo-ivr-choice-btn .key-tag {
+  background: #10b981;
+  color: #03120e;
+  font-weight: 800;
+  font-size: 14px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.demo-ivr-choice-btn .choice-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.demo-ivr-choice-btn.repeat-btn {
+  border-style: dashed;
+  opacity: 0.85;
+}
+
+/* Result & Form Cards */
+.demo-ivr-result-card,
+.demo-ivr-reg-form,
+.demo-ivr-empty-card {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  border-radius: 18px;
+  padding: 16px;
+  text-align: left;
+}
+
+.result-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.result-badge.success {
+  background: rgba(16, 185, 129, 0.25);
+  color: #6ee7b7;
+  border: 1px solid rgba(52, 211, 153, 0.4);
+}
+
+.result-badge.warn {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.result-badge.info {
+  background: rgba(59, 130, 246, 0.2);
+  color: #93c5fd;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.result-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.detail-row:last-child {
+  border-bottom: none;
+}
+
+.detail-row .label {
+  color: #94a3b8;
+}
+
+.detail-row .value {
+  color: #ffffff;
+}
+
+.detail-row .value.id {
+  color: #34d399;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.detail-row .value.highlight {
+  color: #34d399;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.status-pill {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.voice-narrative {
+  margin: 12px 0 0 0;
+  font-size: 12px;
+  color: #cbd5e1;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Quick Registration Form */
+.demo-ivr-reg-form h4 {
+  margin: 0 0 12px 0;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 11px;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.form-group input {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: #ffffff;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #34d399;
+}
+
+.demo-ivr-action-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+/* Empty Card */
+.demo-ivr-empty-card {
+  text-align: center;
+  padding: 24px 16px;
+}
+
+.empty-icon {
+  font-size: 32px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.demo-ivr-empty-card p {
+  margin: 0;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+/* Help List */
+.demo-ivr-help-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.help-item {
+  display: flex;
+  gap: 10px;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+  border-radius: 12px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.help-item:hover {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: #34d399;
+}
+
+.help-key {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #10b981;
+  color: #03120e;
+  font-weight: 800;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.help-item p {
+  margin: 0;
+  font-size: 12px;
+  color: #e2e8f0;
+  line-height: 1.4;
+}
+
+/* Navigation Action Bar */
+.demo-ivr-action-bar {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.demo-ivr-sub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(52, 211, 153, 0.4);
+  color: #a7f3d0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.demo-ivr-sub-btn:hover {
+  background: rgba(16, 185, 129, 0.3);
+  color: #ffffff;
+}
+
+.demo-ivr-sub-btn .key-tag {
+  background: #10b981;
+  color: #03120e;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 8px;
+}
+
+.demo-ivr-loading {
+  text-align: center;
+  font-size: 13px;
+  color: #34d399;
+  padding: 20px 0;
+}
+
+/* ---------------------------------------------------------
+   SIMULATED TELEPHONE KEYPAD (12-KEY DTMF)
+--------------------------------------------------------- */
+.demo-ivr-keypad-panel {
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(52, 211, 153, 0.25);
+  padding: 16px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.keypad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 320px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.keypad-key {
+  aspect-ratio: 1.5;
+  background: linear-gradient(135deg, rgba(20, 60, 45, 0.6) 0%, rgba(8, 30, 22, 0.8) 100%);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  border-radius: 14px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  user-select: none;
+}
+
+.keypad-key:hover {
+  background: linear-gradient(135deg, rgba(30, 80, 60, 0.8) 0%, rgba(16, 50, 36, 0.95) 100%);
+  border-color: #34d399;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(16, 185, 129, 0.3);
+}
+
+.keypad-key:active {
+  transform: scale(0.95);
+  background: #10b981;
+  color: #03120e;
+}
+
+.keypad-key .digit {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.keypad-key .letters {
+  font-size: 9px;
+  letter-spacing: 1px;
+  color: #6ee7b7;
+  margin-top: 3px;
+  font-weight: 600;
+}
+
+.keypad-key:active .letters {
+  color: #03120e;
+}
+
+.keypad-call-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.end-call-btn {
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 28px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+  transition: all 0.2s ease;
+}
+
+.end-call-btn:hover {
+  background: linear-gradient(135deg, #f87171 0%, #dc2626 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.55);
+}

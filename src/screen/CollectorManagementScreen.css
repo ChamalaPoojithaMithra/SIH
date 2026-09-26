@@ -1,0 +1,1046 @@
+* {
+  box-sizing: border-box;
+}
+
+.collector-management-screen {
+  width: 100vw;
+  height: 100vh;
+
+  background:
+    linear-gradient(
+      135deg,
+      #071b14,
+      #0b3023,
+      #063c29
+    );
+
+  color: white;
+
+  padding: 16px 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+/* =========================================
+   TOP NAVIGATION
+========================================= */
+
+.collector-management-top {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  margin-bottom: 10px;
+}
+
+.collector-management-back {
+  border: none;
+  border-radius: 10px;
+
+  background: #25b95f;
+  color: white;
+
+  padding: 9px 17px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.collector-management-back:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.collector-management-back:active {
+  transform: scale(0.98);
+}
+
+.collector-management-top-title {
+  color: #8fb9a7;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.collector-management-container {
+  width: 100%;
+
+  flex: 1;
+
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.collector-management-header {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-shrink: 0;
+
+  padding: 4px 2px;
+}
+
+.collector-management-heading {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+}
+
+.collector-management-logo {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 14px;
+
+  background: rgba(37, 185, 95, 0.14);
+
+  border: 1px solid rgba(37, 185, 95, 0.30);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 27px;
+
+  flex-shrink: 0;
+}
+
+.collector-management-header h1 {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 800;
+
+  color: white;
+}
+
+.collector-management-header p {
+  margin: 4px 0 0;
+
+  color: #a9cbbd;
+
+  font-size: 12px;
+}
+
+.collector-management-total {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 10px 15px;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.collector-management-total > span {
+  font-size: 23px;
+}
+
+.collector-management-total div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.collector-management-total strong {
+  font-size: 17px;
+  color: white;
+}
+
+.collector-management-total small {
+  font-size: 10px;
+  color: #9fbeaf;
+}
+
+/* =========================================
+   SUMMARY GRID
+========================================= */
+
+.collector-summary-grid {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.collector-summary-card {
+  min-height: 72px;
+
+  padding: 12px 14px;
+
+  border-radius: 13px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+}
+
+.collector-summary-icon {
+  width: 40px;
+  height: 40px;
+
+  border-radius: 11px;
+
+  background: rgba(37, 185, 95, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+
+  flex-shrink: 0;
+}
+
+.collector-summary-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.collector-summary-card span {
+  color: #9fbdaf;
+
+  font-size: 11px;
+}
+
+.collector-summary-card strong {
+  color: white;
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.collector-filters {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: 1fr 190px;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+.collector-search-box {
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 13px;
+
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.collector-search-box span {
+  font-size: 15px;
+}
+
+.collector-search-box input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 13px;
+}
+
+.collector-search-box input::placeholder {
+  color: #789a8a;
+}
+
+.collector-status-filter {
+  height: 42px;
+
+  padding: 0 12px;
+
+  border-radius: 10px;
+
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  background: #0a2118;
+
+  color: white;
+
+  outline: none;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.collector-status-filter option {
+  background: #0a2118;
+  color: white;
+}
+
+/* =========================================
+   TABLE CARD
+========================================= */
+
+.collector-table-card {
+  width: 100%;
+
+  flex: 1;
+
+  min-height: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+/* =========================================
+   TABLE TITLE
+========================================= */
+
+.collector-table-title {
+  padding: 12px 16px;
+
+  flex-shrink: 0;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.collector-table-title h2 {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  color: white;
+}
+
+.collector-table-title p {
+  margin: 3px 0 0;
+
+  font-size: 11px;
+
+  color: #8faea0;
+}
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.collector-table-wrapper {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow: auto;
+}
+
+.collector-table-wrapper::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.collector-table-wrapper::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.collector-table-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(37, 185, 95, 0.45);
+
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 850px;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+
+  z-index: 2;
+
+  background: #0b2b20;
+}
+
+th {
+  padding: 10px 13px;
+
+  text-align: left;
+
+  color: #a7c6b8;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+td {
+  padding: 10px 13px;
+
+  color: #d8e9e1;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+tbody tr {
+  transition: 0.15s ease;
+}
+
+tbody tr:hover {
+  background: rgba(37, 185, 95, 0.055);
+}
+
+/* =========================================
+   COLLECTOR ID
+========================================= */
+
+.collector-id {
+  color: #65d991;
+
+  font-size: 11px;
+}
+
+/* =========================================
+   NAME
+========================================= */
+
+.collector-name-cell {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.collector-avatar {
+  width: 29px;
+  height: 29px;
+
+  border-radius: 50%;
+
+  background: rgba(37, 185, 95, 0.16);
+
+  color: #69dc94;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  flex-shrink: 0;
+}
+
+.collector-name-cell span {
+  color: white;
+
+  font-weight: 600;
+}
+
+/* =========================================
+   STATUS
+========================================= */
+
+.collector-status {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 4px 9px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.collector-status.active {
+  background: rgba(37, 185, 95, 0.14);
+
+  color: #5ee08c;
+
+  border: 1px solid rgba(37, 185, 95, 0.25);
+}
+
+.collector-status.inactive {
+  background: rgba(255, 255, 255, 0.08);
+
+  color: #a8b7b0;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================
+   VIEW BUTTON
+========================================= */
+
+.collector-view-button {
+  border: none;
+
+  border-radius: 7px;
+
+  padding: 6px 13px;
+
+  background: #25b95f;
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.collector-view-button:hover {
+  filter: brightness(1.08);
+
+  transform: translateY(-1px);
+}
+
+.collector-view-button:active {
+  transform: scale(0.97);
+}
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.collector-empty {
+  height: 180px;
+
+  text-align: center;
+}
+
+.collector-empty > div {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+}
+
+.collector-empty span {
+  font-size: 28px;
+}
+
+.collector-empty strong {
+  color: white;
+
+  font-size: 14px;
+}
+
+.collector-empty p {
+  margin: 0;
+
+  color: #8ca99b;
+
+  font-size: 11px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .collector-management-screen {
+    height: 100vh;
+
+    overflow-y: auto;
+
+    padding: 15px 18px;
+  }
+
+  .collector-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .collector-table-card {
+    min-height: 400px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .collector-management-screen {
+    height: auto;
+    min-height: 100vh;
+
+    overflow-y: auto;
+
+    padding: 14px;
+  }
+
+  .collector-management-container {
+    gap: 12px;
+  }
+
+  .collector-management-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .collector-management-heading {
+    align-items: flex-start;
+  }
+
+  .collector-management-logo {
+    width: 45px;
+    height: 45px;
+
+    font-size: 23px;
+  }
+
+  .collector-management-header h1 {
+    font-size: 20px;
+  }
+
+  .collector-management-header p {
+    font-size: 11px;
+  }
+
+  .collector-management-total {
+    width: 100%;
+  }
+
+  .collector-summary-grid {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 8px;
+  }
+
+  .collector-summary-card {
+    padding: 10px;
+
+    min-height: 68px;
+  }
+
+  .collector-summary-icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 17px;
+  }
+
+  .collector-summary-card span {
+    font-size: 9px;
+  }
+
+  .collector-summary-card strong {
+    font-size: 16px;
+  }
+
+  .collector-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .collector-table-card {
+    min-height: 420px;
+  }
+
+  .collector-management-top-title {
+    display: none;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .collector-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collector-management-heading {
+    gap: 10px;
+  }
+
+  .collector-management-header h1 {
+    font-size: 18px;
+  }
+
+  .collector-management-total {
+    padding: 9px 12px;
+  }
+}
+/* ==========================================
+   HEADER ACTIONS
+========================================== */
+
+.collector-management-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.collector-add-button {
+  background: #25b95f;
+  border: 2px solid #25b95f;
+  color: white;
+  border-radius: 9px;
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(37, 185, 95, 0.18);
+  transition: 0.2s ease;
+}
+
+.collector-add-button:hover {
+  background: #1fa653;
+  border-color: #1fa653;
+  transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   ADD COLLECTOR MODAL
+========================================== */
+
+.collector-add-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.68);
+  backdrop-filter: blur(5px);
+}
+
+.collector-add-modal {
+  width: min(520px, 100%);
+
+  max-height: 90vh;
+  overflow-y: auto;
+
+  background: linear-gradient(
+    135deg,
+    #0b3023,
+    #063c29
+  );
+
+  border: 1px solid rgba(37, 185, 95, 0.35);
+  border-radius: 16px;
+
+  color: white;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45);
+
+  animation: collectorModalOpen 0.2s ease;
+}
+
+.collector-add-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 22px 24px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.collector-add-icon {
+  font-size: 32px;
+  margin-bottom: 5px;
+}
+
+.collector-add-header h2 {
+  margin: 0;
+
+  font-size: 21px;
+  font-weight: 800;
+
+  color: white;
+}
+
+.collector-add-header p {
+  margin: 4px 0 0;
+
+  font-size: 12px;
+
+  color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.collector-add-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  padding: 20px 24px 24px;
+}
+
+.collector-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.collector-form-group label {
+  font-size: 12px;
+  font-weight: 700;
+
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.collector-form-group input,
+.collector-form-group select {
+  width: 100%;
+
+  padding: 11px 13px;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+
+  color: white;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.2s ease;
+}
+
+.collector-form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.collector-form-group input:focus,
+.collector-form-group select:focus {
+  border-color: #25b95f;
+  background: rgba(37, 185, 95, 0.08);
+}
+
+.collector-form-group select option {
+  background: #0b3023;
+  color: white;
+}
+
+
+/* ==========================================
+   FORM ERROR
+========================================== */
+
+.collector-form-error {
+  padding: 10px 12px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 80, 80, 0.1);
+
+  border: 1px solid rgba(255, 80, 80, 0.25);
+
+  color: #ffb3b3;
+
+  font-size: 12px;
+}
+
+
+/* ==========================================
+   FORM BUTTONS
+========================================== */
+
+.collector-form-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 5px;
+}
+
+.collector-form-cancel {
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  border-radius: 8px;
+
+  color: white;
+
+  padding: 10px 18px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.collector-form-cancel:hover {
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.collector-form-save {
+  background: #25b95f;
+
+  border: 2px solid #25b95f;
+
+  border-radius: 8px;
+
+  color: white;
+
+  padding: 10px 20px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.collector-form-save:hover {
+  background: #1fa653;
+  border-color: #1fa653;
+}
+
+.collector-form-save:disabled,
+.collector-form-cancel:disabled,
+.collector-details-close:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+  .collector-management-header-actions {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+
+  .collector-add-button {
+    padding: 9px 13px;
+    font-size: 13px;
+  }
+
+  .collector-add-overlay {
+    padding: 12px;
+  }
+
+  .collector-add-header {
+    padding: 18px;
+  }
+
+  .collector-add-form {
+    padding: 16px 18px 20px;
+  }
+
+  .collector-form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .collector-form-cancel,
+  .collector-form-save {
+    width: 100%;
+  }
+}

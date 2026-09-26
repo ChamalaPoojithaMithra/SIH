@@ -1,0 +1,428 @@
+.pickup-route-screen {
+  min-height: 100vh;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #f1f5f9;
+}
+
+.pickup-route-card {
+  width: 100%;
+  max-width: 850px;
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+/* BACK */
+
+.pickup-route-back {
+  border: none;
+  background: transparent;
+  color: #334155;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+/* HEADER */
+
+.pickup-route-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.pickup-route-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
+  background: #dbeafe;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.pickup-route-header h1 {
+  margin: 0 0 5px;
+  font-size: 27px;
+  color: #0f172a;
+}
+
+.pickup-route-header h2 {
+  margin: 0 0 5px;
+  font-size: 20px;
+  color: #1d4ed8;
+}
+
+.pickup-route-header p {
+  margin: 0;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* SUCCESS */
+
+.pickup-route-success {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 20px;
+  margin-bottom: 22px;
+
+  border-radius: 17px;
+
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+}
+
+.pickup-route-success-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #16a34a;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.pickup-route-success h3 {
+  margin: 0 0 5px;
+  color: #166534;
+  font-size: 19px;
+}
+
+.pickup-route-success p {
+  margin: 0;
+  color: #475569;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* SUMMARY */
+
+.pickup-route-summary {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 25px;
+}
+
+.pickup-route-summary-box {
+  padding: 18px;
+
+  border-radius: 16px;
+
+  background: #f8fafc;
+
+  border: 1px solid #e2e8f0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.pickup-route-summary-box span {
+  font-size: 25px;
+}
+
+.pickup-route-summary-box small {
+  color: #64748b;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.pickup-route-summary-box strong {
+  color: #0f172a;
+
+  font-size: 18px;
+}
+
+/* START POINT */
+
+.pickup-route-start {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 18px;
+
+  margin-bottom: 22px;
+
+  border-radius: 16px;
+
+  background: #eff6ff;
+
+  border: 1px solid #bfdbfe;
+}
+
+.route-point-icon {
+  width: 46px;
+
+  height: 46px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #2563eb;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 23px;
+}
+
+.pickup-route-start small {
+  display: block;
+
+  color: #64748b;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.pickup-route-start strong {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #1e3a8a;
+
+  font-size: 16px;
+}
+
+/* ROUTE SECTION */
+
+.pickup-route-section {
+  margin-bottom: 20px;
+}
+
+.pickup-route-section h3 {
+  margin: 0 0 5px;
+
+  color: #0f172a;
+
+  font-size: 19px;
+}
+
+.pickup-route-description {
+  margin: 0 0 18px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+}
+
+/* ROUTE LIST */
+
+.pickup-route-list {
+  padding: 5px 0;
+}
+
+.pickup-route-stop {
+  display: flex;
+
+  gap: 14px;
+
+  min-height: 70px;
+}
+
+.pickup-route-stop-left {
+  width: 42px;
+
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.pickup-route-number {
+  width: 38px;
+
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: #16a34a;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 16px;
+
+  font-weight: 900;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.pickup-route-line {
+  position: absolute;
+
+  top: 38px;
+
+  bottom: -2px;
+
+  width: 3px;
+
+  background: #bbf7d0;
+}
+
+.pickup-route-stop-info {
+  flex: 1;
+
+  padding: 5px 0 20px;
+}
+
+.pickup-route-stop-info strong {
+  display: block;
+
+  color: #0f172a;
+
+  font-size: 16px;
+
+  margin-bottom: 5px;
+}
+
+.pickup-route-stop-info span {
+  color: #64748b;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+/* GUIDANCE */
+
+.pickup-route-guidance {
+  text-align: center;
+
+  font-size: 30px;
+
+  margin: 8px 0;
+
+  animation: pickupRouteFingerBounce 1.2s ease-in-out infinite;
+}
+
+@keyframes pickupRouteFingerBounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+/* BUTTON */
+
+.pickup-route-button {
+  width: 100%;
+
+  padding: 17px 20px;
+
+  border: none;
+
+  border-radius: 14px;
+
+  background: #16a34a;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.pickup-route-button:hover {
+  background: #15803d;
+
+  transform: translateY(-1px);
+}
+
+.pickup-route-button:active {
+  transform: scale(0.98);
+}
+
+.pickup-route-button span {
+  margin-left: 10px;
+
+  font-size: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+  .pickup-route-screen {
+    padding: 16px;
+  }
+
+  .pickup-route-card {
+    padding: 20px;
+  }
+
+  .pickup-route-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pickup-route-header h1 {
+    font-size: 22px;
+  }
+
+  .pickup-route-header h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 450px) {
+  .pickup-route-summary {
+    grid-template-columns: 1fr;
+  }
+}
